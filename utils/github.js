@@ -1,62 +1,58 @@
 const axios = require('axios');
 
 /**
- * Calculate a rank based on followers and public repos
- * @param {number} followers 
- * @param {number} repos 
- * @returns {string} Rank
+ * Trophy definitions and criteria
  */
-function calculateRank(followers, repos) {
-  const score = (followers * 2) + repos;
-  if (score > 1000) return 'S+';
-  if (score > 500) return 'S';
-  if (score > 200) return 'A+';
-  if (score > 100) return 'A';
-  if (score > 50) return 'B+';
-  if (score > 20) return 'B';
-  return 'C';
-}
+const TROPHY_LIST = [
+    { id: 'first_repo', label: 'First Repo', icon: '🏆', criteria: (user) => user.public_repos >= 1 },
+    { id: 'repo_builder', label: 'Repo Builder', icon: '📦', criteria: (user) => user.public_repos >= 10 },
+    { id: 'os_addict', label: 'OS Addict', icon: '🔥', criteria: (user) => user.public_repos >= 30 },
+    { id: 'rising_dev', label: 'Rising Dev', icon: '⭐', criteria: (user) => user.followers >= 10 },
+    { id: 'popular_dev', label: 'Popular Dev', icon: '🌟', criteria: (user) => user.followers >= 50 },
+    { id: 'community_leader', label: 'Leader', icon: '👑', criteria: (user) => user.followers >= 100 },
+    { id: 'networker', label: 'Networker', icon: '🤝', criteria: (user) => user.following >= 50 },
+];
 
 /**
- * Fetch GitHub user data from the REST API
+ * Fetch GitHub user data and determine achievements
  * @param {string} username 
- * @returns {Promise<object>} User data or error object
+ * @returns {Promise<object>} User data and achievements
  */
-async function fetchUserData(username) {
-  const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-  const headers = {
-    'User-Agent': 'github-profile-svg-generator',
-    'Accept': 'application/vnd.github.v3+json'
-  };
-
-  if (GITHUB_TOKEN) {
-    headers['Authorization'] = `token ${GITHUB_TOKEN}`;
-  }
-
-  try {
-    const response = await axios.get(`https://api.github.com/users/${username}`, { headers });
-
-    const { login, name, public_repos, followers, following, avatar_url } = response.data;
-
-    return {
-      success: true,
-      username: login,
-      displayName: name || login,
-      publicRepos: public_repos,
-      followers: followers,
-      following: following,
-      avatarUrl: avatar_url,
-      rank: calculateRank(followers, public_repos)
+async function fetchTrophyData(username) {
+    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+    const headers = {
+        'User-Agent': 'github-trophy-generator',
+        'Accept': 'application/vnd.github.v3+json'
     };
-  } catch (error) {
-    if (error.response && error.response.status === 404) {
-      throw new Error('User not found');
+
+    if (GITHUB_TOKEN) {
+        headers['Authorization'] = `token ${GITHUB_TOKEN}`;
     }
-    if (error.response && error.response.status === 403) {
-      throw new Error('GitHub API rate limit exceeded');
+
+    try {
+        const response = await axios.get(`https://api.github.com/users/${username}`, { headers });
+        const user = response.data;
+
+        // Filter trophies based on criteria
+        const achievements = TROPHY_LIST.filter(t => t.criteria(user)).map(t => ({
+            label: t.label,
+            icon: t.icon
+        }));
+
+        return {
+            success: true,
+            username: user.login,
+            achievements: achievements
+        };
+    } catch (error) {
+        if (error.response && error.response.status === 404) {
+            throw new Error('User not found');
+        }
+        if (error.response && error.response.status === 403) {
+            throw new Error('Rate limit exceeded');
+        }
+        throw new Error('Failed to fetch user data');
     }
-    throw new Error('Failed to fetch user data');
-  }
 }
 
-module.exports = { fetchUserData };
+module.exports = { fetchTrophyData };

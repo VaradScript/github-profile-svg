@@ -2,13 +2,13 @@
     "version": 2,
     "rewrites": [
         {
-            "source": "/api/profile",
-            "destination": "/api/profile.js"
+            "source": "/api/trophies",
+            "destination": "/api/trophies.js"
         }
     ],
     "headers": [
         {
-            "source": "/api/profile",
+            "source": "/api/trophies",
             "headers": [
                 {
                     "key": "Content-Type",

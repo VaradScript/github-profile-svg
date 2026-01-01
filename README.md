@@ -1,86 +1,69 @@
-# 🚀 GitHub Profile SVG Generator
+# 🏆 GitHub Trophy Generator
 
-A production-ready API to generate clean, modern SVG stat cards for your GitHub Profile README. Embed your real-time stats (Repos, Followers, Following) with support for dark/light themes and custom titles.
+A production-ready API to generate trophy-style SVG badges for your GitHub Profile README. This tool derives "achievements" from your GitHub activity (repos, followers, following) and displays them as a beautiful grid of medals.
 
 ## ✨ Features
-- **Pure SVG:** No HTML/JSX, perfectly compatible with GitHub READMEs.
-- **Dynamic Themes:** Support for `dark`, `light`, `dracula`, and `trophy` modes.
-- **Smart Ranking:** Automatic ranking (S+, S, A, B, C) based on your GitHub activity.
-- **Micro-Animations:** Smooth CSS transitions for text and rank stats.
-- **Auto-Caching:** Responses are cached for 24 hours to handle rate limits and improve performance.
-- **Zero Configuration:** Deploy to Vercel in seconds.
-- **Error Handling:** Graceful SVG error messages for invalid usernames.
+- **Pure SVG:** Works perfectly as an image link in GitHub READMEs.
+- **Dynamic Achievements:** Automatically calculates trophies from your GitHub stats.
+- **Customizable Layout:** Choose your theme (`dark` or `light`) and grid columns.
+- **Auto-Scaling:** The SVG height adjusts automatically based on the number of trophies earned.
+- **Production Performance:** Serverless API with 24-hour caching.
 
 ## 🛠 Usage
 
-Simply embed the following link in your GitHub README:
+Embed the following in your GitHub README:
 
 ```markdown
-![Profile Stats](https://your-domain.vercel.app/api/profile?username=YOUR_USERNAME&theme=trophy)
+![My Trophies](https://your-domain.vercel.app/api/trophies?username=YOUR_USERNAME&theme=dark&columns=3)
 ```
 
 ### Query Parameters
 | Parameter | Required | Description | Options |
 |-----------|----------|-------------|---------|
-| `username`| Yes      | GitHub username | Any valid GitHub user |
-| `theme`   | No       | Visual theme | `dark` (default), `light`, `dracula`, `trophy` |
-| `title`   | No       | Custom card title | Any string (URL encoded) |
+| `username`| Yes      | GitHub username | Any valid user |
+| `theme`   | No       | Visual style | `dark` (default), `light` |
+| `columns` | No       | Number of columns in grid | `1`, `2`, `3` (default), etc. |
 
-### Examples
-
-**Trophy Theme (New!)**
-`https://your-domain.vercel.app/api/profile?username=varadscript&theme=trophy`
-
-**Dracula Theme (Highly Recommended)**
-`https://your-domain.vercel.app/api/profile?username=varadscript&theme=dracula`
-
-**Dark Theme**
-`https://your-domain.vercel.app/api/profile?username=varadscript&theme=dark`
-
-**Light Theme**
-`https://your-domain.vercel.app/api/profile?username=varadscript&theme=light`
+## 🏆 Achievement List
+| Trophy | Milestone | Criteria |
+|--------|-----------|---------|
+| 🏆 **First Repo** | Beginner | `public_repos` ≥ 1 |
+| 📦 **Repo Builder** | Regular | `public_repos` ≥ 10 |
+| 🔥 **OS Addict** | Advanced | `public_repos` ≥ 30 |
+| ⭐ **Rising Dev**| Emerging | `followers` ≥ 10 |
+| 🌟 **Popular Dev**| Notable | `followers` ≥ 50 |
+| 👑 **Leader** | Influence | `followers` ≥ 100 |
+| 🤝 **Networker** | Community | `following` ≥ 50 |
 
 ## 🚀 Deployment
 
 ### Deploy to Vercel
-
-1. **Fork this repository.**
-2. **Connect to Vercel:** Go to [Vercel](https://vercel.com/) and import your forked repo.
-3. **Deploy:** Vercel will automatically detect the settings and deploy the API.
-4. **Environment Variables (Optional):** If you hit rate limits frequently, you can modify `utils/github.js` to use a Personal Access Token (PAT).
+1. **Fork** this repository.
+2. Go to [Vercel](https://vercel.com) and **Import** your fork.
+3. (Optional) Add a `GITHUB_TOKEN` environment variable to increase rate limits.
+4. **Deploy**!
 
 ### Local Development
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/github-profile-svg.git
-
-# Install dependencies
 npm install
-
-# Run locally using Vercel CLI
 npm run dev
 ```
 
 ## 📂 Project Structure
 ```text
-github-profile-svg/
-├── api/             # Main API route (Vercel Serverless Function)
-├── utils/           # GitHub API integration logic
-├── themes/          # SVG templates (Dark & Light)
-├── vercel.json      # Routing and Caching configuration
-├── package.json     # Dependencies
-└── README.md        # Documentation
+github-trophy-generator/
+├── api/
+│   └── trophies.js      # Main API endpoint
+├── utils/
+│   └── github.js        # GitHub data & achievement logic
+├── themes/
+│   └── trophyRenderer.js # SVG grid generation
+├── vercel.json           # Routing & Caching
+└── package.json          # Dependencies
 ```
 
-## 🛡 License
-This project is licensed under the **MIT License**.
-
-## 🔮 Future Improvements
-- [ ] Add more themes (Solarized, Dracula, High Contrast).
-- [ ] Support for private repositories (using OAuth/PAT).
-- [ ] Display Top Languages or most starred repos.
-- [ ] Animated SVG transitions.
-- [ ] Integration with GitHub Actions for automated updates.
+## 📜 License
+Licensed under the [MIT License](LICENSE).
 
 ---
-Built with ❤️ by [Antigravity](https://github.com/your-username)
+Built with ❤️ for the Open Source Community.
