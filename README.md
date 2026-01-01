@@ -24,15 +24,19 @@ Embed the following in your GitHub README:
 | `theme`   | `dark`  | `dark` or `light` |
 | `columns` | `6`     | Cards per row (set to 6 or 3 for best results) |
 
-## 🏆 Ranking Criteria
-Medals are awarded based on realistic tiers:
+## 🏆 Ranking Criteria & Tiers
+Medals are awarded and titled based on realistic tiers for different activities:
 
-| Rank | Followers | Repos | Experience |
-|------|-----------|-------|------------|
-| **SSS**| > 2000 | > 200 | > 10 Years |
-| **S**  | > 500  | > 50  | > 5 Years |
-| **A**  | > 50   | > 10  | > 1 Year |
-| **B**  | > 10   | > 5   | > 6 Months |
+| Category | Title | S Rank Criteria |
+|----------|-------|-----------------|
+| **Stars** | *Stargazer* | > 100 Stars |
+| **Followers** | *Celebrity* | > 500 Followers |
+| **Repos** | *Repo Creator* | > 50 Repos |
+| **Pull Requests** | *Pull Shark* | > 100 PRs |
+| **Issues** | *Bug Hunter* | > 100 Issues |
+| **Account Age** | *Veteran* | > 5 Years |
+
+**Ranks available:** `SSS`, `SS`, `S`, `AAA`, `AA`, `A`, `B`, `C`
 
 ## 🚀 Deployment
 1. **Fork** this repository.

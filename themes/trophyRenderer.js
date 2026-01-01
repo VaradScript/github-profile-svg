@@ -65,17 +65,22 @@ function renderTrophySVG(data, options = {}) {
         </defs>
 
         <!-- Category Title (Top) -->
-        <text x="55" y="25" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" font-size="11" fill="${grad[0]}">
+        <text x="55" y="22" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" font-size="10" fill="${grad[0]}">
             ${t.category.toUpperCase()}
         </text>
 
         <!-- Rank Letter (Center) -->
-        <text x="55" y="70" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="900" font-size="38" fill="url(#${gradId})" filter="drop-shadow(0 0 2px rgba(0,0,0,0.5))">
+        <text x="55" y="65" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="900" font-size="38" fill="url(#${gradId})" filter="drop-shadow(0 0 2px rgba(0,0,0,0.5))">
             ${rankText}
+        </text>
+        
+        <!-- Trophy Title (Mid) -->
+        <text x="55" y="85" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="600" font-size="9" fill="${grad[1]}">
+            ${t.title}
         </text>
 
         <!-- Value Stats (Bottom) -->
-        <text x="55" y="95" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-size="10" fill="${textSub}">
+        <text x="55" y="100" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-size="10" fill="${textSub}">
             ${t.value}
         </text>
       </g>
