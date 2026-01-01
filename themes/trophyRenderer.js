@@ -86,7 +86,7 @@ function renderTrophySVG(data, options = {}) {
     <svg width="${totalW}" height="${totalH}" viewBox="0 0 ${totalW} ${totalH}" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <style>
-           @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+           @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&amp;display=swap');
         </style>
       </defs>
       <rect width="100%" height="100%" fill="none"/> 
