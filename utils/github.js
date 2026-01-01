@@ -1,38 +1,37 @@
 const axios = require('axios');
 
 /**
- * XP Point Weights
+ * XP Point Weights (Balanced for Beginner to Pro)
  */
 const XP_WEIGHTS = {
     STAR: 5,
     FOLLOWER: 10,
-    REPO: 15,
+    REPO: 10,
     PR: 10,
     ISSUE: 5,
-    YEAR: 50
+    YEAR: 30
 };
 
 /**
- * Milestone Thresholds (Bronze, Silver, Gold, Legendary)
+ * Milestone Thresholds (Lowered for Beginner friendly progression)
  */
 const MILESTONES = {
-    stars: [5, 25, 100, 500],
-    followers: [10, 50, 200, 1000],
-    repos: [5, 20, 50, 150],
-    prs: [10, 50, 150, 500],
-    issues: [10, 50, 150, 500],
-    experience: [1, 2, 5, 10]
+    stars: [1, 10, 50, 200], // Bronze at 1 star now!
+    followers: [1, 15, 60, 250],
+    repos: [1, 10, 30, 100],
+    prs: [1, 10, 50, 200],
+    issues: [1, 10, 50, 200],
+    experience: [0, 1, 3, 5] // Bronze starts immediately (0 years)
 };
 
 const TIER_LABELS = ['BRONZE', 'SILVER', 'GOLD', 'LEGENDARY'];
 
 /**
- * Calculate Level from XP
- * Ladder: 0-250 (L1), 250-750 (L2), 750-1750 (L3), 1750-3750 (L4), etc.
+ * Simplified Level Logic
  */
 function calculateLevel(totalXP) {
     let level = 1;
-    let xpThreshold = 250;
+    let xpThreshold = 100; // Faster leveling for beginners
     let tempXP = totalXP;
 
     while (tempXP >= xpThreshold) {
@@ -75,7 +74,7 @@ async function fetchDetailedStats(username, headers) {
 }
 
 /**
- * Get Trophy Data for a specific metric
+ * Get Trophy Data
  */
 function getMetricTrophy(id, value, config) {
     const milestones = MILESTONES[id];
@@ -116,7 +115,6 @@ async function fetchTrophyData(username) {
         const accountAgeDays = (new Date() - new Date(user.created_at)) / (1000 * 60 * 60 * 24);
         const accountAgeYears = Math.floor(accountAgeDays / 365);
 
-        // Calc Total XP
         const totalXP =
             (stars * XP_WEIGHTS.STAR) +
             (user.followers * XP_WEIGHTS.FOLLOWER) +
@@ -127,39 +125,20 @@ async function fetchTrophyData(username) {
 
         const levelData = calculateLevel(totalXP);
 
-        // Visible / Base Trophies
         const visibleTrophies = [
-            getMetricTrophy('stars', stars, { title: 'Star Magnet', icon: '⭐', unit: 'Stars' }),
-            getMetricTrophy('followers', user.followers, { title: 'Influencer', icon: '👥', unit: 'Fans' }),
-            getMetricTrophy('repos', user.public_repos, { title: 'Repo Titan', icon: '📦', unit: 'Repos' }),
-            getMetricTrophy('prs', prs, { title: 'Open Sourcer', icon: '🔧', unit: 'PRs' }),
-            getMetricTrophy('issues', issues, { title: 'Bug Hunter', icon: '🐞', unit: 'Issues' }),
-            getMetricTrophy('experience', accountAgeYears, { title: 'Veteran', icon: '⏳', unit: 'Years' })
+            getMetricTrophy('stars', stars, { title: 'Stars', icon: '⭐', unit: 'Pts' }),
+            getMetricTrophy('followers', user.followers, { title: 'Followers', icon: '👥', unit: 'Pts' }),
+            getMetricTrophy('repos', user.public_repos, { title: 'Repos', icon: '📦', unit: 'Pts' }),
+            getMetricTrophy('prs', prs, { title: 'PRs', icon: '🔧', unit: 'Pts' }),
+            getMetricTrophy('issues', issues, { title: 'Issues', icon: '🐞', unit: 'Pts' }),
+            getMetricTrophy('experience', accountAgeYears, { title: 'Years', icon: '⏳', unit: 'Pts' })
         ];
 
-        // Locked / Achievement Trophies
         const lockedTrophies = [
-            { id: 'leader', title: 'Community Leader', icon: '👑', value: user.followers, nextValue: 200, unlocked: user.followers >= 200, tier: user.followers >= 200 ? 'LEGENDARY' : 'LOCKED', unit: 'Fans' },
-            { id: 'hero', title: 'Open Source Hero', icon: '🛡️', value: prs, nextValue: 100, unlocked: prs >= 100, tier: prs >= 100 ? 'GOLD' : 'LOCKED', unit: 'PRs' },
-            { id: 'legend', title: 'Star Legend', icon: '🌌', value: stars, nextValue: 500, unlocked: stars >= 500, tier: stars >= 500 ? 'LEGENDARY' : 'LOCKED', unit: 'Stars' },
-            { id: 'machine', title: 'Repo Machine', icon: '🤖', value: user.public_repos, nextValue: 100, unlocked: user.public_repos >= 100, tier: user.public_repos >= 100 ? 'GOLD' : 'LOCKED', unit: 'Repos' }
+            { id: 'leader', title: 'Leader', icon: '👑', value: user.followers, nextValue: 100, unlocked: user.followers >= 100, tier: user.followers >= 100 ? 'LEGENDARY' : 'LOCKED', unit: 'Pts' },
+            { id: 'hero', title: 'Hero', icon: '🛡️', value: prs, nextValue: 50, unlocked: prs >= 50, tier: prs >= 50 ? 'GOLD' : 'LOCKED', unit: 'Pts' },
+            { id: 'legend', title: 'Legend', icon: '🌌', value: stars, nextValue: 200, unlocked: stars >= 200, tier: stars >= 200 ? 'LEGENDARY' : 'LOCKED', unit: 'Pts' }
         ];
-
-        // Hidden / Secret Trophies
-        const hiddenTrophies = [];
-        if (accountAgeYears >= 10) {
-            hiddenTrophies.push({ id: 'early', title: 'Early Adopter', icon: '🦕', unlocked: true, tier: 'LEGENDARY', note: 'Joined 10+ years ago' });
-        }
-        if (user.public_repos >= 50 && user.followers < 10) {
-            hiddenTrophies.push({ id: 'wolf', title: 'Lone Wolf', icon: '🐺', unlocked: true, tier: 'GOLD', note: '50+ Repos, low followers' });
-        }
-        if (prs >= 100 && user.followers < 20) {
-            hiddenTrophies.push({ id: 'silent', title: 'Silent Contributor', icon: '🤫', unlocked: true, tier: 'SILVER', note: '100+ PRs, low fame' });
-        }
-        // Midnight Committer - Inferred from high repo/PR count or just random/derived
-        if (totalXP > 2000 && user.id % 2 === 0) {
-            hiddenTrophies.push({ id: 'midnight', title: 'Midnight Committer', icon: '🌙', unlocked: true, tier: 'SILVER', note: 'Active night owl' });
-        }
 
         return {
             username: user.login,
@@ -167,12 +146,12 @@ async function fetchTrophyData(username) {
             level: levelData,
             visible: visibleTrophies,
             locked: lockedTrophies,
-            hidden: hiddenTrophies
+            hidden: []
         };
 
     } catch (error) {
         if (error.response && error.response.status === 404) throw new Error('User not found');
-        throw new Error('Failed to fetch statistics');
+        throw new Error('Failed to fetch stats');
     }
 }
 
