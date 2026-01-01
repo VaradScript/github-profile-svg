@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
     try {
         const data = await fetchTrophyData(username.toLowerCase());
 
-        const svg = renderTrophySVG(data, { theme, columns, showAll: all });
+        const svg = renderTrophySVG(data, { theme, columns });
 
         return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?>' + svg);
 

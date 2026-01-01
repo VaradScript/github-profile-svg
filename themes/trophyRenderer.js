@@ -1,113 +1,107 @@
 /**
- * Render the Trophy Grid SVG
- * @param {object} data User data with achievements
- * @param {object} options Theme and layout options
+ * Render the Classic Trophy SVG
+ * @param {object} data User data with Ranked trophies
+ * @param {object} options Theme options
  * @returns {string} SVG string
  */
 function renderTrophySVG(data, options = {}) {
-  const { username, achievements } = data;
-  const { theme = 'dark', columns = 3, showAll = 'true' } = options;
+  const { username, trophies } = data;
+  const { theme = 'dark', columns = 6, margin = 15 } = options;
 
-  const isDark = theme === 'dark';
-  const bgColor = isDark ? '#0d1117' : '#ffffff';
-  const cardBg = isDark ? '#161b22' : '#f6f8fa';
-  const strokeColor = isDark ? '#30363d' : '#d0d7de';
-  const textColor = isDark ? '#c9d1d9' : '#24292f';
-  const labelColor = isDark ? '#58a6ff' : '#0969da';
-  const lockedColor = isDark ? '#484f58' : '#afb8c1';
+  // Theme Constants
+  const isDark = theme !== 'light';
+  const bg = isDark ? '#282c34' : '#ffffff';  // OneDark-ish
+  const textTitle = isDark ? '#ffffff' : '#24292f';
+  const textSub = isDark ? '#abb2bf' : '#57606a';
 
-  const cardWidth = 140;
-  const cardHeight = 160;
+  // Rank Colors
+  const COLORS = {
+    SSS: ['#ff0055', '#ff00aa'],
+    SS: ['#ffcc00', '#ffaa00'],
+    S: ['#ffcc00', '#ffaa00'],
+    AAA: ['#00e5ff', '#0099ff'],
+    AA: ['#00e5ff', '#0099ff'],
+    A: ['#00e5ff', '#0099ff'],
+    B: ['#00ff99', '#00cc66'],
+    C: ['#8b949e', '#6e7681']
+  };
+
+  const cardW = 110;
+  const cardH = 110;
   const gap = 15;
-  const headerHeight = 70;
 
-  // Filter trophies based on showAll parameter
-  const displayAchievements = showAll === 'true'
-    ? achievements
-    : achievements.filter(a => a.earned);
+  // Layout
+  const numCols = Math.min(Math.max(parseInt(columns) || 6, 1), 10);
+  const numRows = Math.ceil(trophies.length / numCols);
+  const totalW = numCols * (cardW + gap) + gap;
+  const totalH = numRows * (cardH + gap) + gap;
 
-  if (displayAchievements.length === 0) {
-    return renderErrorSVG(`No trophies earned yet for ${username}`);
-  }
+  let content = '';
 
-  const numCols = Math.min(Math.max(parseInt(columns) || 3, 1), 6);
-  const numRows = Math.ceil(displayAchievements.length / numCols);
+  trophies.forEach((t, i) => {
+    const col = i % numCols;
+    const row = Math.floor(i / numCols);
+    const x = gap + col * (cardW + gap);
+    const y = gap + row * (cardH + gap);
 
-  const totalWidth = numCols * (cardWidth + gap) + gap;
-  const totalHeight = numRows * (cardHeight + gap) + headerHeight + 20;
+    const grad = COLORS[t.rank] || COLORS.C;
+    const gradId = `grad_${t.category.replace(/\s/g, '')}_${i}`;
 
-  const centerX = cardWidth / 2;
-  let trophiesHtml = '';
+    // Rank Logic
+    const isSecret = t.rank === 'SECRET';
+    const rankText = isSecret ? '?' : t.rank;
 
-  displayAchievements.forEach((trophy, index) => {
-    const col = index % numCols;
-    const row = Math.floor(index / numCols);
-
-    const x = gap + col * (cardWidth + gap);
-    const y = headerHeight + row * (cardHeight + gap);
-
-    const opacity = trophy.earned ? '1' : '0.35';
-    const grayscale = trophy.earned ? '' : 'filter: grayscale(100%);';
-    const borderEffect = trophy.earned ? `stroke: ${labelColor}; stroke-width: 2;` : `stroke: ${strokeColor}; stroke-width: 1;`;
-
-    trophiesHtml += `
-      <g transform="translate(${x}, ${y})" class="trophy-card" style="animation-delay: ${index * 100}ms; opacity: ${opacity};">
-        <rect width="${cardWidth}" height="${cardHeight}" rx="15" fill="${cardBg}" style="${borderEffect}"/>
+    content += `
+      <g transform="translate(${x}, ${y})">
+        <!-- Card Frame -->
+        <rect width="${cardW}" height="${cardH}" rx="8" fill="${bg}" stroke="url(#${gradId})" stroke-width="3"/>
         
-        <!-- Trophy Seal Background -->
-        <circle cx="${centerX}" cy="65" r="35" fill="${bgColor}" opacity="0.5" stroke="${trophy.earned ? labelColor : strokeColor}" stroke-dasharray="2 2"/>
-        
-        <text x="${centerX}" y="78" text-anchor="middle" font-size="45" style="${grayscale}">${trophy.icon}</text>
-        
-        <text x="${centerX}" y="125" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" font-size="14" fill="${trophy.earned ? labelColor : lockedColor}">${trophy.label}</text>
-        <text x="${centerX}" y="145" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11" fill="${textColor}" opacity="0.4">${trophy.earned ? 'UNLOCKED' : 'LOCKED'}</text>
+        <!-- Gradient Def -->
+        <defs>
+            <linearGradient id="${gradId}" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="${grad[0]}"/>
+                <stop offset="100%" stop-color="${grad[1]}"/>
+            </linearGradient>
+        </defs>
+
+        <!-- Category Title (Top) -->
+        <text x="55" y="25" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" font-size="11" fill="${grad[0]}">
+            ${t.category.toUpperCase()}
+        </text>
+
+        <!-- Rank Letter (Center) -->
+        <text x="55" y="70" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="900" font-size="38" fill="url(#${gradId})" filter="drop-shadow(0 0 2px rgba(0,0,0,0.5))">
+            ${rankText}
+        </text>
+
+        <!-- Value Stats (Bottom) -->
+        <text x="55" y="95" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-size="10" fill="${textSub}">
+            ${t.value}
+        </text>
       </g>
     `;
   });
 
   return `
-    <svg width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <style>
-        .header { font: 800 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor}; }
-        .sub-header { font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor}; opacity: 0.6; }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(15px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .trophy-card { animation: fadeIn 0.6s ease-out forwards; }
-        .earned-count { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${labelColor}; }
-      </style>
-      
-      <rect width="100%" height="100%" rx="20" fill="${bgColor}"/>
-      
-      <g transform="translate(${gap}, 35)">
-        <text x="0" y="0" class="header">${username}'s Hall of Fame</text>
-        <text x="0" y="20" class="sub-header">GitHub Achievement Collection</text>
-      </g>
-      
-      ${trophiesHtml}
-      
-      <text x="${totalWidth - gap}" y="${totalHeight - 15}" text-anchor="end" class="earned-count">
-        Earned: ${achievements.filter(a => a.earned).length}/${achievements.length}
-      </text>
+    <svg width="${totalW}" height="${totalH}" viewBox="0 0 ${totalW} ${totalH}" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+           @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+        </style>
+      </defs>
+      <rect width="100%" height="100%" fill="none"/> 
+      ${content}
     </svg>
   `.trim();
 }
 
-/**
- * Render Error SVG
- * @param {string} message 
- * @returns {string} SVG string
- */
 function renderErrorSVG(message) {
   return `
-    <svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100%" height="100%" rx="15" fill="#0d1117" stroke="#c53030" stroke-width="2"/>
-      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="16" font-weight="600" fill="#f85149">
-        ⚠️ Error: ${message}
-      </text>
+    <svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" rx="5" fill="#0d1117" stroke="#ff0055"/>
+      <text x="200" y="35" text-anchor="middle" font-family="Segoe UI" fill="#ff0055" font-weight="bold">${message}</text>
     </svg>
-  `.trim();
+  `;
 }
 
 module.exports = { renderTrophySVG, renderErrorSVG };

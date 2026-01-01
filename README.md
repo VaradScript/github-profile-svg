@@ -1,20 +1,20 @@
-# 🏆 GitHub Trophy: Hall of Fame
+# 🏆 GitHub Trophy: Classic Edition
 
-A premium, production-ready API to generate trophy-style SVG badges for your GitHub Profile README. This version features a complete "Hall of Fame" mode that shows both your earned achievements and the ones you still have to unlock.
+A polished rank-based trophy generator for your GitHub Profile. This tool generates "Classic" style medal cards with SSS - C rankings based on your verified stats.
 
 ## ✨ Features
-- **Hall of Fame Mode:** Shows your entire trophy collection (including locked ones with a sleek grayscale effect).
-- **Pure SVG Core:** perfectly compatible with GitHub READMEs.
-- **Micro-Animations:** Smooth slide-up and fade-in effects for each medal.
-- **Auto-Scaling:** The grid height adjusts automatically based on the collection size.
-- **Legacy Support:** Works with both `/api/trophies` and `/api/profile` endpoints.
+- **Rank System:** Calculates SSS, SS, S, AAA, A, B, C ranks for every stats category.
+- **Classic Layout:** Renders horizontal strips of square achievement cards.
+- **Gradient Themes:** Premium gradients for high-tier ranks (Gold for S, Blue for A, Green for B).
+- **Zero Config:** Just add your username.
+- **Pure SVG:** Crisply rendered vector graphics suitable for any zoom level.
 
 ## 🛠 Usage
 
 Embed the following in your GitHub README:
 
 ```markdown
-![My Trophies](https://your-domain.vercel.app/api/trophies?username=YOUR_USERNAME&all=true)
+![My Trophies](https://your-domain.vercel.app/api/trophies?username=YOUR_USERNAME&columns=6)
 ```
 
 ### Query Parameters
@@ -22,19 +22,17 @@ Embed the following in your GitHub README:
 |-----------|---------|-------------|
 | `username`| Required| Your GitHub username |
 | `theme`   | `dark`  | `dark` or `light` |
-| `columns` | `3`     | Number of medals per row |
-| `all`     | `true`  | Set to `false` to hide locked trophies |
+| `columns` | `6`     | Cards per row (set to 6 or 3 for best results) |
 
-## 🏆 Achievement Tiers
-| Medal | Target | Requirement |
-|-------|--------|-------------|
-| 🏆 **First Repo** | Code | `public_repos` ≥ 1 |
-| 📦 **Repo Builder**| Momentum | `public_repos` ≥ 10 |
-| 🔥 **OS Addict** | Mastery | `public_repos` ≥ 30 |
-| ⭐ **Rising Dev** | Reach | `followers` ≥ 10 |
-| 🌟 **Popular Dev** | Impact | `followers` ≥ 50 |
-| 👑 **Leader** | Authority | `followers` ≥ 100 |
-| 🤝 **Networker** | Community | `following` ≥ 50 |
+## 🏆 Ranking Criteria
+Medals are awarded based on realistic tiers:
+
+| Rank | Followers | Repos | Experience |
+|------|-----------|-------|------------|
+| **SSS**| > 2000 | > 200 | > 10 Years |
+| **S**  | > 500  | > 50  | > 5 Years |
+| **A**  | > 50   | > 10  | > 1 Year |
+| **B**  | > 10   | > 5   | > 6 Months |
 
 ## 🚀 Deployment
 1. **Fork** this repository.
