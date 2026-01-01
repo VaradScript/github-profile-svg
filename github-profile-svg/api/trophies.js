@@ -15,8 +15,8 @@ module.exports = async (req, res) => {
         const data = await fetchTrophyData(username.toLowerCase());
 
         // Check if user has any trophies
-        if (data.achievements.length === 0) {
-            return res.status(200).send(renderErrorSVG(`No trophies earned yet for ${username}`));
+        if (!data.achievements || data.achievements.length === 0) {
+            return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?>' + renderErrorSVG(`No trophies earned yet for ${username}`));
         }
 
         const svg = renderTrophySVG(data, { theme, columns });
@@ -24,13 +24,13 @@ module.exports = async (req, res) => {
         // Cache the response for 24 hours
         res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600');
 
-        return res.status(200).send(svg);
+        return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?>' + svg);
 
     } catch (error) {
         console.error('Error in trophies API:', error.message);
         const status = error.message === 'User not found' ? 404 :
             error.message === 'Rate limit exceeded' ? 403 : 500;
 
-        return res.status(status).send(renderErrorSVG(error.message));
+        return res.status(status).send('<?xml version="1.0" encoding="UTF-8"?>' + renderErrorSVG(error.message));
     }
 };
