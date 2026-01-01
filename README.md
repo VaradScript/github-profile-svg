@@ -1,69 +1,46 @@
-# 🏆 GitHub Trophy Generator
+# 🏆 GitHub Trophy: Hall of Fame
 
-A production-ready API to generate trophy-style SVG badges for your GitHub Profile README. This tool derives "achievements" from your GitHub activity (repos, followers, following) and displays them as a beautiful grid of medals.
+A premium, production-ready API to generate trophy-style SVG badges for your GitHub Profile README. This version features a complete "Hall of Fame" mode that shows both your earned achievements and the ones you still have to unlock.
 
 ## ✨ Features
-- **Pure SVG:** Works perfectly as an image link in GitHub READMEs.
-- **Dynamic Achievements:** Automatically calculates trophies from your GitHub stats.
-- **Customizable Layout:** Choose your theme (`dark` or `light`) and grid columns.
-- **Auto-Scaling:** The SVG height adjusts automatically based on the number of trophies earned.
-- **Production Performance:** Serverless API with 24-hour caching.
+- **Hall of Fame Mode:** Shows your entire trophy collection (including locked ones with a sleek grayscale effect).
+- **Pure SVG Core:** perfectly compatible with GitHub READMEs.
+- **Micro-Animations:** Smooth slide-up and fade-in effects for each medal.
+- **Auto-Scaling:** The grid height adjusts automatically based on the collection size.
+- **Legacy Support:** Works with both `/api/trophies` and `/api/profile` endpoints.
 
 ## 🛠 Usage
 
 Embed the following in your GitHub README:
 
 ```markdown
-![My Trophies](https://your-domain.vercel.app/api/trophies?username=YOUR_USERNAME&theme=dark&columns=3)
+![My Trophies](https://your-domain.vercel.app/api/trophies?username=YOUR_USERNAME&all=true)
 ```
 
 ### Query Parameters
-| Parameter | Required | Description | Options |
-|-----------|----------|-------------|---------|
-| `username`| Yes      | GitHub username | Any valid user |
-| `theme`   | No       | Visual style | `dark` (default), `light` |
-| `columns` | No       | Number of columns in grid | `1`, `2`, `3` (default), etc. |
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `username`| Required| Your GitHub username |
+| `theme`   | `dark`  | `dark` or `light` |
+| `columns` | `3`     | Number of medals per row |
+| `all`     | `true`  | Set to `false` to hide locked trophies |
 
-## 🏆 Achievement List
-| Trophy | Milestone | Criteria |
-|--------|-----------|---------|
-| 🏆 **First Repo** | Beginner | `public_repos` ≥ 1 |
-| 📦 **Repo Builder** | Regular | `public_repos` ≥ 10 |
-| 🔥 **OS Addict** | Advanced | `public_repos` ≥ 30 |
-| ⭐ **Rising Dev**| Emerging | `followers` ≥ 10 |
-| 🌟 **Popular Dev**| Notable | `followers` ≥ 50 |
-| 👑 **Leader** | Influence | `followers` ≥ 100 |
+## 🏆 Achievement Tiers
+| Medal | Target | Requirement |
+|-------|--------|-------------|
+| 🏆 **First Repo** | Code | `public_repos` ≥ 1 |
+| 📦 **Repo Builder**| Momentum | `public_repos` ≥ 10 |
+| 🔥 **OS Addict** | Mastery | `public_repos` ≥ 30 |
+| ⭐ **Rising Dev** | Reach | `followers` ≥ 10 |
+| 🌟 **Popular Dev** | Impact | `followers` ≥ 50 |
+| 👑 **Leader** | Authority | `followers` ≥ 100 |
 | 🤝 **Networker** | Community | `following` ≥ 50 |
 
 ## 🚀 Deployment
-
-### Deploy to Vercel
 1. **Fork** this repository.
-2. Go to [Vercel](https://vercel.com) and **Import** your fork.
-3. (Optional) Add a `GITHUB_TOKEN` environment variable to increase rate limits.
-4. **Deploy**!
-
-### Local Development
-```bash
-npm install
-npm run dev
-```
-
-## 📂 Project Structure
-```text
-github-trophy-generator/
-├── api/
-│   └── trophies.js      # Main API endpoint
-├── utils/
-│   └── github.js        # GitHub data & achievement logic
-├── themes/
-│   └── trophyRenderer.js # SVG grid generation
-├── vercel.json           # Routing & Caching
-└── package.json          # Dependencies
-```
-
-## 📜 License
-Licensed under the [MIT License](LICENSE).
+2. Import to **Vercel**.
+3. Add `GITHUB_TOKEN` for higher rate limits.
+4. **Deploy** and enjoy your Hall of Fame!
 
 ---
-Built with ❤️ for the Open Source Community.
+Built with ❤️ for GitHub Maintainers.

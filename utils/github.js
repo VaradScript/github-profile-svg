@@ -33,10 +33,11 @@ async function fetchTrophyData(username) {
         const response = await axios.get(`https://api.github.com/users/${username}`, { headers });
         const user = response.data;
 
-        // Filter trophies based on criteria
-        const achievements = TROPHY_LIST.filter(t => t.criteria(user)).map(t => ({
+        // Map all trophies with earned status
+        const achievements = TROPHY_LIST.map(t => ({
             label: t.label,
-            icon: t.icon
+            icon: t.icon,
+            earned: t.criteria(user)
         }));
 
         return {

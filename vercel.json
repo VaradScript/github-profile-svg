@@ -4,11 +4,15 @@
         {
             "source": "/api/trophies",
             "destination": "/api/trophies.js"
+        },
+        {
+            "source": "/api/profile",
+            "destination": "/api/trophies.js"
         }
     ],
     "headers": [
         {
-            "source": "/api/trophies",
+            "source": "/api/(.*)",
             "headers": [
                 {
                     "key": "Content-Type",
