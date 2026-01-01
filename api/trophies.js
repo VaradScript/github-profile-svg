@@ -4,13 +4,15 @@ const { renderTrophySVG, renderErrorSVG } = require('../themes/trophyRenderer');
 module.exports = async (req, res) => {
     const { username, theme = 'dark', columns, column, animation = 'on', showLocked = 'true', all } = req.query;
 
-    // Handle aliases: column -> columns / all -> showLocked
+    // Handle aliases
     const effectiveColumns = columns || column || 3;
     const effectiveShowLocked = showLocked || all || 'true';
 
-    // Set the correct content type for SVG
+    // Set Content-Type
     res.setHeader('Content-Type', 'image/svg+xml');
-    res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600');
+
+    // Disable Cache to fix 'Still Issue' logic
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
 
     if (!username) {
         return res.status(400).send('<?xml version="1.0" encoding="UTF-8"?>' + renderErrorSVG('Username is required'));

@@ -60,7 +60,7 @@ function renderTrophySVG(data, options = {}) {
       ? `filter: drop-shadow(0 0 4px ${colors.stroke[0]}80);`
       : '';
 
-    // Progress Bar (for standard trophies only)
+    // Progress Bar
     let progressBar = '';
     if (t.max) {
       const pct = Math.min((t.value / t.max) * 100, 100);
@@ -75,7 +75,7 @@ function renderTrophySVG(data, options = {}) {
         <!-- Card Frame -->
         <rect width="${cardW}" height="${cardH}" rx="12" fill="${cardBg}" stroke="${isDark ? '#30363d' : '#d0d7de'}" stroke-width="1"/>
         
-        <!-- Tier Frame (if High Tier) -->
+        <!-- Tier Frame -->
         <rect width="${cardW}" height="${cardH}" rx="12" fill="none" stroke="url(#${gradId})" stroke-width="${t.tier === 'LEGENDARY' ? 2 : 1.5}" opacity="${t.tier === 'BRONZE' ? 0.3 : 1}" style="${glow}"/>
 
         <!-- Gradient Def -->
@@ -107,8 +107,9 @@ function renderTrophySVG(data, options = {}) {
     `;
   });
 
+  // Use width="100%" for responsive sizing on phones
   return `
-    <svg width="${totalW}" height="${totalH}" viewBox="0 0 ${totalW} ${totalH}" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height="${totalH}" viewBox="0 0 ${totalW} ${totalH}" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <style>
            @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&amp;display=swap');
