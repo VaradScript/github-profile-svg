@@ -8,12 +8,13 @@ function renderTrophySVG(data, options = {}) {
     theme = 'dark',
     animation = 'on',
     showLocked = 'false',
+    showHidden = 'false',
     mode = 'unreal'
   } = options;
 
   const isDark = theme !== 'light';
 
-  // Define required theme variables
+  // Theme Variables
   const bg = isDark ? '#0d1117' : '#ffffff';
   const cardBg = isDark ? '#161b22' : '#f6f8fa';
   const textTitle = isDark ? '#c9d1d9' : '#24292f';
@@ -29,53 +30,58 @@ function renderTrophySVG(data, options = {}) {
   };
 
   const DOMAIN_COLORS = {
-    STARS: '#f1e05a', REPOS: '#58a6ff', FOLLOWERS: '#ff7b72', ISSUES: '#ffa657',
-    PR: '#a5d6ff', YEARS: '#7ee787', GISTS: '#d299ff', COMMITS: '#ff69b4',
-    REVIEWS: '#3fb950', LANGUAGES: '#bc8cff', DISCUSSIONS: '#6e7681',
-    FORKS: '#d1d5da', SPONSORS: '#ea4aaa', EXPLORER: '#f9826c'
+    stars: '#f1e05a', repos: '#58a6ff', followers: '#ff7b72', issues: '#ffa657',
+    prs: '#a5d6ff', experience: '#7ee787', gists: '#d299ff', commits: '#ff69b4',
+    reviews: '#3fb950', languages: '#bc8cff', discussions: '#6e7681',
+    forks: '#d1d5da', sponsors: '#ea4aaa', stars_given: '#f9826c'
   };
 
-  let displayItems = visible.filter(t => showLocked === 'true' || t.unlocked);
-  if (displayItems.length === 0) displayItems = visible.slice(0, 3);
-  displayItems.push(...hidden);
+  // Filter items based on locked/hidden status
+  let displayItems = visible.filter(t => {
+    if (showLocked !== 'true' && !t.unlocked) return false;
+    return true;
+  });
+
+  if (displayItems.length === 0) displayItems = visible.slice(0, 5);
 
   const cardW = 120;
   const cardH = 160;
   const gap = 15;
-  const numCols = 7; // Optimal for 14 trophies (2 rows)
+  const numCols = 7;
   const actualCols = Math.min(displayItems.length, numCols);
   const numRows = Math.ceil(displayItems.length / numCols);
 
   const totalW = actualCols * (cardW + gap) + gap;
   const totalH = numRows * (cardH + gap) + gap;
 
-  const getTrophyCup = (color, rank, mode, tier, domain) => {
+  const getTrophyCup = (color, rank, mode, tier, domain, isSecret) => {
     const domainColor = DOMAIN_COLORS[domain] || color;
+    const styleAttr = isSecret ? `filter="url(#blurFilter)"` : '';
 
     if (mode === 'terminal') {
-      return `<g transform="translate(-25, -25)"><text x="25" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="${domainColor}">[${rank}]</text><text x="25" y="45" text-anchor="middle" font-family="monospace" font-size="8" fill="${domainColor}">#_TROPHY</text></g>`;
+      return `<g transform="translate(-25, -25)" ${styleAttr}><text x="25" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="${domainColor}">[${isSecret ? '?' : rank}]</text><text x="25" y="45" text-anchor="middle" font-family="monospace" font-size="8" fill="${domainColor}">#_${isSecret ? 'SECRET' : 'TROPHY'}</text></g>`;
     }
     if (mode === 'minecraft') {
-      return `<g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="20" fill="${color}" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="${color}" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="${color}" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">${rank}</text></g>`;
+      return `<g transform="translate(-25, -25)" ${styleAttr}><rect x="15" y="10" width="20" height="20" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'sketch') {
-      return `<g transform="translate(-30, -30)"><path d="M10 20 C 15 10, 45 10, 50 20 Q 55 40, 30 60 Q 5 40, 10 20" fill="none" stroke="${domainColor}" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"/><text x="30" y="35" text-anchor="middle" font-family="cursive" font-size="20" fill="${domainColor}">${rank}</text></g>`;
+      return `<g transform="translate(-30, -30)" ${styleAttr}><path d="M10 20 C 15 10, 45 10, 50 20 Q 55 40, 30 60 Q 5 40, 10 20" fill="none" stroke="${domainColor}" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"/><text x="30" y="35" text-anchor="middle" font-family="cursive" font-size="20" fill="${domainColor}">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'glass') {
-      return `<g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px ${domainColor})">${rank}</text></g>`;
+      return `<g transform="translate(-30, -30)" ${styleAttr}><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px ${domainColor})">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'nostalgic') {
-      return `<g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="${color}" /><rect x="10" y="10" width="5" height="10" fill="${color}" /><rect x="35" y="10" width="5" height="10" fill="${color}" /><rect x="22" y="25" width="6" height="10" fill="${color}" /><rect x="18" y="35" width="14" height="5" fill="${color}" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="${isDark ? '#000' : '#fff'}">${rank}</text></g>`;
+      return `<g transform="translate(-25, -25)" ${styleAttr}><rect x="15" y="10" width="20" height="15" fill="${color}" /><rect x="10" y="10" width="5" height="10" fill="${color}" /><rect x="35" y="10" width="5" height="10" fill="${color}" /><rect x="22" y="25" width="6" height="10" fill="${color}" /><rect x="18" y="35" width="14" height="5" fill="${color}" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="${isDark ? '#000' : '#fff'}">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'cyberpunk') {
-      return `<g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="${domainColor}" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="${domainColor}" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="${domainColor}" style="filter: drop-shadow(0 0 5px ${domainColor})">${rank}</text></g>`;
+      return `<g transform="translate(-30, -30)" ${styleAttr}><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="${domainColor}" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="${domainColor}" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="${domainColor}" style="filter: drop-shadow(0 0 5px ${domainColor})">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'traditional') {
-      return `<g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="#e2b13c" stroke="#8b4513" stroke-width="2" /><path d="M15 15 Q30 5 45 15 L30 50 Z" fill="#d4af37" /><text x="30" y="38" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="24" fill="#5d2e0a">${rank}</text></g>`;
+      return `<g transform="translate(-30, -30)" ${styleAttr}><circle cx="30" cy="30" r="25" fill="#e2b13c" stroke="#8b4513" stroke-width="2" /><path d="M15 15 Q30 5 45 15 L30 50 Z" fill="#d4af37" /><text x="30" y="38" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="24" fill="#5d2e0a">${isSecret ? '?' : rank}</text></g>`;
     }
 
-    const filter = mode === 'unreal' ? `filter="url(#glow-${tier})"` : '';
-    return `<g transform="translate(-30, -30) scale(0.85)" ${filter}><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="${domainColor}" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="${domainColor}" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="${domainColor}" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="${isDark ? '#000' : '#fff'}">${rank}</text></g>`;
+    const filterEffect = mode === 'unreal' ? `filter="url(#glow-${tier})"` : '';
+    return `<g transform="translate(-30, -30) scale(0.85)" ${filterEffect} ${styleAttr}><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="${domainColor}" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="${domainColor}" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="${domainColor}" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="${isDark ? '#000' : '#fff'}">${isSecret ? '?' : rank}</text></g>`;
   };
 
   let content = '';
@@ -87,17 +93,18 @@ function renderTrophySVG(data, options = {}) {
     const y = gap + row * (cardH + gap);
 
     const config = TIER_CONFIG[t.tier] || TIER_CONFIG.LOCKED;
-    const domainColor = DOMAIN_COLORS[t.id] || config.color;
+    const domainColor = t.isSecret && showHidden !== 'true' ? '#333' : (DOMAIN_COLORS[t.id] || config.color);
     const animDelay = i * 60;
 
-    let progressBar = '';
     const progress = t.progress !== undefined ? t.progress : 100;
+    const isShowingSecret = t.isSecret && showHidden !== 'true';
+    let progressBar = '';
 
     if (mode === 'terminal') {
       const barLen = 10;
       const filled = Math.floor((progress / 100) * barLen);
-      const bar = '#'.repeat(filled) + '-'.repeat(barLen - filled);
-      progressBar = `<text x="15" y="142" font-family="monospace" font-size="8" fill="${domainColor}">[${bar}] ${Math.floor(progress)}%</text>`;
+      const bar = isShowingSecret ? '??????????' : ('#'.repeat(filled) + '-'.repeat(barLen - filled));
+      progressBar = `<text x="15" y="142" font-family="monospace" font-size="8" fill="${domainColor}">[${bar}] ${isShowingSecret ? '???' : Math.floor(progress)}%</text>`;
     } else if (mode === 'minecraft') {
       progressBar = `<rect x="15" y="138" width="${cardW - 30}" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="${(cardW - 30) * (progress / 100)}" height="8" fill="${domainColor}"/>`;
     } else {
@@ -111,10 +118,10 @@ function renderTrophySVG(data, options = {}) {
     }[mode] || 'Segoe UI, sans-serif';
 
     const cardStyles = {
-      glass: `fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16"`,
+      glass: `fill="rgba(255,255,255,0.05)" stroke="${isShowingSecret ? '#333' : 'rgba(255,255,255,0.2)'}" stroke-width="1" rx="16"`,
       terminal: `fill="#000" stroke="${domainColor}" stroke-width="1"`,
       minecraft: `fill="#795548" stroke="#3e2723" stroke-width="4"`,
-      sketch: `fill="none" stroke="${domainColor}" stroke-width="2" stroke-dasharray="5,2" rx="4"`
+      sketch: `fill="none" stroke="${domainColor}" stroke-width="1.5" stroke-dasharray="5,3" rx="4"`
     }[mode] || `fill="${mode === 'traditional' ? '#f4e4bc' : cardBg}" stroke="${mode === 'cyberpunk' ? domainColor : (mode === 'traditional' ? '#8b4513' : strokeColor)}" stroke-width="${mode === 'traditional' ? 3 : 1}" rx="${mode === 'nostalgic' || mode === 'traditional' ? 0 : 8}"`;
 
     content += `
@@ -126,18 +133,18 @@ function renderTrophySVG(data, options = {}) {
           `<rect width="${cardW}" height="${cardH}" ${cardStyles} />`}
           
           <!-- Category -->
-          <text x="${cardW / 2}" y="22" text-anchor="middle" font-family="${fontFamily}" font-weight="800" font-size="10" fill="${domainColor}" style="text-transform: uppercase;">${t.id}</text>
+          <text x="${cardW / 2}" y="22" text-anchor="middle" font-family="${fontFamily}" font-weight="800" font-size="10" fill="${domainColor}" style="text-transform: uppercase;">${isShowingSecret ? 'Rare Achievement' : t.id}</text>
 
           <!-- Trophy -->
-          <g transform="translate(${cardW / 2}, 70)">${getTrophyCup(config.color, config.label, mode, t.tier, t.id)}</g>
+          <g transform="translate(${cardW / 2}, 70)">${getTrophyCup(config.color, config.label, mode, t.tier, t.id, isShowingSecret)}</g>
 
           <!-- Title -->
-          <text x="${cardW / 2}" y="122" text-anchor="middle" font-family="${fontFamily}" font-weight="700" font-size="9" fill="${mode === 'terminal' || mode === 'glass' ? '#fff' : textTitle}">${t.title}</text>
+          <text x="${cardW / 2}" y="122" text-anchor="middle" font-family="${fontFamily}" font-weight="700" font-size="9" fill="${isShowingSecret ? '#555' : (mode === 'terminal' || mode === 'glass' ? '#fff' : textTitle)}">${isShowingSecret ? '??? UNKNOWN ???' : t.title}</text>
           
           <!-- Progress -->
           ${progressBar}
-          <text x="${cardW / 2}" y="152" text-anchor="middle" font-family="${fontFamily}" font-size="9" fill="${mode === 'terminal' ? domainColor : textSub}" font-weight="700">
-            ${t.value}${t.unit === 'pt' ? ' pt' : t.unit}
+          <text x="${cardW / 2}" y="152" text-anchor="middle" font-family="${fontFamily}" font-size="9" fill="${isShowingSecret ? '#444' : (mode === 'terminal' ? domainColor : textSub)}" font-weight="700">
+            ${isShowingSecret ? '???' : t.value}${isShowingSecret ? '' : (t.unit ? (t.unit === 'pt' ? ' pt' : t.unit) : '')}
           </text>
         </g>
       </g>
@@ -155,6 +162,7 @@ function renderTrophySVG(data, options = {}) {
           @keyframes glitch { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         </style>
         <filter id="cardShadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/></filter>
+        <filter id="blurFilter"><feGaussianBlur in="SourceGraphic" stdDeviation="4" /></filter>
         <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" /><stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" /></linearGradient>
         ${Object.entries(TIER_CONFIG).map(([tier, cfg]) => `<filter id="glow-${tier}" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter>`).join('')}
         ${Object.entries(DOMAIN_COLORS).map(([id, color]) => `

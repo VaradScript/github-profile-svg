@@ -102,20 +102,20 @@
       <g transform="translate(15, 15)">
         <g class="fade-up" style="animation-delay: 0ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#f1e05a" style="text-transform: uppercase;">stars</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#f1e05a" style="text-transform: uppercase;">stars</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #f1e05a)">S</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Star GOAT</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Star GOAT</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="72" height="4" rx="2" fill="#f1e05a"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="72" height="8" fill="#f1e05a"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             100
           </text>
         </g>
@@ -124,20 +124,20 @@
       <g transform="translate(150, 15)">
         <g class="fade-up" style="animation-delay: 60ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#58a6ff" style="text-transform: uppercase;">repos</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#58a6ff" style="text-transform: uppercase;">repos</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #58a6ff)">A</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#a0a0a0" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#a0a0a0" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#a0a0a0" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">A</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Lowkey Builder</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Lowkey Builder</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#58a6ff"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#58a6ff"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             20
           </text>
         </g>
@@ -146,20 +146,20 @@
       <g transform="translate(285, 15)">
         <g class="fade-up" style="animation-delay: 120ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ff7b72" style="text-transform: uppercase;">followers</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#ff7b72" style="text-transform: uppercase;">followers</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ff7b72)">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#ff4b82" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#ff4b82" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#ff4b82" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Main Character</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Main Character</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#ff7b72"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#ff7b72"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             500
           </text>
         </g>
@@ -168,20 +168,20 @@
       <g transform="translate(420, 15)">
         <g class="fade-up" style="animation-delay: 180ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ffa657" style="text-transform: uppercase;">issues</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#ffa657" style="text-transform: uppercase;">issues</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ffa657)">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#cd7f32" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#cd7f32" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#cd7f32" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">B</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Bug NPC</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Bug NPC</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#ffa657"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#ffa657"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             5
           </text>
         </g>
@@ -190,20 +190,20 @@
       <g transform="translate(555, 15)">
         <g class="fade-up" style="animation-delay: 240ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#a5d6ff" style="text-transform: uppercase;">prs</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#a5d6ff" style="text-transform: uppercase;">prs</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #a5d6ff)">S</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Master Chef</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Master Chef</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#a5d6ff"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#a5d6ff"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             100
           </text>
         </g>
@@ -212,20 +212,20 @@
       <g transform="translate(690, 15)">
         <g class="fade-up" style="animation-delay: 300ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#7ee787" style="text-transform: uppercase;">experience</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#7ee787" style="text-transform: uppercase;">experience</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #7ee787)">A</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#a0a0a0" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#a0a0a0" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#a0a0a0" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">A</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Old Head</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Old Head</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#7ee787"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#7ee787"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             3
           </text>
         </g>
@@ -234,20 +234,20 @@
       <g transform="translate(825, 15)">
         <g class="fade-up" style="animation-delay: 360ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#d299ff" style="text-transform: uppercase;">gists</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#d299ff" style="text-transform: uppercase;">gists</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #d299ff)">S</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Code Wizard</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Code Wizard</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#d299ff"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#d299ff"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             30
           </text>
         </g>
@@ -256,20 +256,20 @@
       <g transform="translate(15, 190)">
         <g class="fade-up" style="animation-delay: 420ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ff69b4" style="text-transform: uppercase;">commits</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#ff69b4" style="text-transform: uppercase;">commits</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ff69b4)">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#ff4b82" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#ff4b82" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#ff4b82" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Demon Mode</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Demon Mode</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#ff69b4"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#ff69b4"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             5000
           </text>
         </g>
@@ -278,20 +278,20 @@
       <g transform="translate(150, 190)">
         <g class="fade-up" style="animation-delay: 480ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#3fb950" style="text-transform: uppercase;">reviews</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#3fb950" style="text-transform: uppercase;">reviews</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #3fb950)">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#cd7f32" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#cd7f32" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#cd7f32" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">B</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Lurker</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Lurker</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#3fb950"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#3fb950"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             2
           </text>
         </g>
@@ -300,20 +300,20 @@
       <g transform="translate(285, 190)">
         <g class="fade-up" style="animation-delay: 540ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#bc8cff" style="text-transform: uppercase;">languages</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#bc8cff" style="text-transform: uppercase;">languages</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #bc8cff)">S</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Lingua God</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Lingua God</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#bc8cff"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#bc8cff"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             12
           </text>
         </g>
@@ -322,20 +322,20 @@
       <g transform="translate(420, 190)">
         <g class="fade-up" style="animation-delay: 600ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="#333" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#333" style="text-transform: uppercase;">Rare Achievement</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#333" style="text-transform: uppercase;">Rare Achievement</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" filter="url(#blurFilter)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #6e7681)">?</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" filter="url(#blurFilter)"><rect x="15" y="10" width="20" height="20" fill="#333" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#333" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#333" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">?</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#555">??? UNKNOWN ???</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#555">??? UNKNOWN ???</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#333"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#444" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#333"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#444" font-weight="700">
             ???
           </text>
         </g>
@@ -344,20 +344,20 @@
       <g transform="translate(555, 190)">
         <g class="fade-up" style="animation-delay: 660ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#d1d5da" style="text-transform: uppercase;">forks</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#d1d5da" style="text-transform: uppercase;">forks</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #d1d5da)">A</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#a0a0a0" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#a0a0a0" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#a0a0a0" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">A</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Forker</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Forker</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#d1d5da"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#d1d5da"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             15
           </text>
         </g>
@@ -366,20 +366,20 @@
       <g transform="translate(690, 190)">
         <g class="fade-up" style="animation-delay: 720ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ea4aaa" style="text-transform: uppercase;">sponsors</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#ea4aaa" style="text-transform: uppercase;">sponsors</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ea4aaa)">S</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#ffb300" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Sugar Parent</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Sugar Parent</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#ea4aaa"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#ea4aaa"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             5
           </text>
         </g>
@@ -388,20 +388,20 @@
       <g transform="translate(825, 190)">
         <g class="fade-up" style="animation-delay: 780ms">
           <!-- Card Body -->
-          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1" rx="16" />
+          <rect width="120" height="160" fill="#795548" stroke="#3e2723" stroke-width="4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#f9826c" style="text-transform: uppercase;">stars_given</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New" font-weight="800" font-size="10" fill="#f9826c" style="text-transform: uppercase;">stars_given</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #f9826c)">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)" ><rect x="15" y="10" width="20" height="20" fill="#ff4b82" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="#ff4b82" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="#ff4b82" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Galaxy Collector</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New" font-weight="700" font-size="9" fill="#c9d1d9">Galaxy Collector</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#f9826c"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
+          <rect x="15" y="138" width="90" height="8" fill="#333" stroke="#000"/><rect x="15" y="138" width="90" height="8" fill="#f9826c"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New" font-size="9" fill="#8b949e" font-weight="700">
             2500
           </text>
         </g>

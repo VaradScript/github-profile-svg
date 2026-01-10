@@ -7,6 +7,7 @@ module.exports = async (req, res) => {
         theme = 'dark',
         animation = 'on',
         showLocked = 'false',
+        showHidden = 'false',
         mode = '2d' // Default mode
     } = req.query;
 
@@ -25,6 +26,7 @@ module.exports = async (req, res) => {
             theme,
             animation,
             showLocked,
+            showHidden,
             mode
         });
 

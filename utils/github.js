@@ -42,6 +42,7 @@ const MILESTONES = {
 
 const TIER_LABELS = ['BRONZE', 'SILVER', 'GOLD', 'LEGENDARY'];
 const RANK_LABELS = ['C', 'B', 'A', 'S', 'SSS']; // Indices mapped based on performance
+const SECRET_CATEGORIES = ['discussions', 'sponsors', 'forks', 'stars_given'];
 
 /**
  * Level logic (Simplified)
@@ -59,32 +60,40 @@ function calculateLevel(totalXP) {
 }
 
 /**
- * Get Trophy Data for a specific metric
+ * Calculate trophy tier and rank based on points
  */
-function getMetricTrophy(id, value, config) {
-    const milestones = MILESTONES[id];
+function getMetricTrophy(id, value, options = {}) {
+    const milestones = MILESTONES[id] || [1, 10, 50, 100];
     let tierIndex = -1;
+
     for (let i = 0; i < milestones.length; i++) {
         if (value >= milestones[i]) tierIndex = i;
     }
 
-    const isUnlocked = tierIndex >= 0;
-    const currentTier = isUnlocked ? TIER_LABELS[tierIndex] : 'LOCKED';
-    const currentRank = isUnlocked ? RANK_LABELS[tierIndex + 1] : RANK_LABELS[0];
-    const title = isUnlocked ? TROPHY_TITLES[id][tierIndex] : 'Locked';
+    const unlocked = tierIndex >= 0;
+    const tier = unlocked ? TIER_LABELS[tierIndex] : 'LOCKED';
+    const rank = unlocked ? RANK_LABELS[tierIndex + 1] : RANK_LABELS[0];
+    const title = TROPHY_TITLES[id][tierIndex] || TROPHY_TITLES[id][0];
 
-    const nextMilestone = milestones[tierIndex + 1] || milestones[milestones.length - 1];
+    // Progress to next tier
+    const nextMilestone = tierIndex < milestones.length - 1 ? milestones[tierIndex + 1] : milestones[milestones.length - 1];
+    const prevMilestone = tierIndex >= 0 ? milestones[tierIndex] : 0;
+    const progress = tierIndex < milestones.length - 1
+        ? ((value - prevMilestone) / (nextMilestone - prevMilestone)) * 100
+        : 100;
+
+    const isSecret = SECRET_CATEGORIES.includes(id) && tierIndex < 1; // Hidden if below Silver
 
     return {
-        id: config.label || id,
+        id,
         title,
-        icon: config.icon,
+        tier,
+        rank: tier === 'LOCKED' ? 'C' : rank,
         value,
-        unit: 'pt',
-        unlocked: isUnlocked,
-        tier: currentTier,
-        label: currentRank,
-        progress: (value / nextMilestone) * 100
+        progress: Math.min(100, Math.max(0, progress)),
+        unlocked,
+        unit: options.unit || '',
+        isSecret
     };
 }
 

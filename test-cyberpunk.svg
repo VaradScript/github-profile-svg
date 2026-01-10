@@ -8,92 +8,93 @@
           @keyframes glitch { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         </style>
         <filter id="cardShadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/></filter>
+        <filter id="blurFilter"><feGaussianBlur in="SourceGraphic" stdDeviation="4" /></filter>
         <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" /><stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" /></linearGradient>
         <filter id="glow-LEGENDARY" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-GOLD" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-SILVER" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-BRONZE" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-LOCKED" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter>
         
-          <radialGradient id="grad-LEGENDARY-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-stars" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-stars" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-stars" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-stars" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-stars" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-repos" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-repos" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-repos" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-repos" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-repos" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-followers" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-followers" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-followers" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-followers" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-followers" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-issues" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-issues" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-issues" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-issues" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-issues" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-prs" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-prs" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-prs" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-prs" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-prs" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-experience" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-experience" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-experience" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-experience" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-experience" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-gists" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-gists" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-gists" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-gists" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-gists" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-commits" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-commits" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-commits" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-commits" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-commits" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-reviews" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-reviews" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-reviews" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-reviews" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-reviews" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-languages" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-languages" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-languages" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-languages" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-languages" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-discussions" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-discussions" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-discussions" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-discussions" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-discussions" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-forks" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-forks" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-forks" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-forks" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-forks" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-sponsors" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-sponsors" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-sponsors" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-sponsors" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-sponsors" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
         
-          <radialGradient id="grad-LEGENDARY-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-GOLD-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-SILVER-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-BRONZE-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
-          <radialGradient id="grad-LOCKED-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LEGENDARY-stars_given" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-stars_given" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-stars_given" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-stars_given" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-stars_given" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
         
       </defs>
       <rect width="100%" height="100%" fill="none"/>
@@ -101,21 +102,21 @@
       <g transform="translate(15, 15)">
         <g class="fade-up" style="animation-delay: 0ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ff4b82" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ff4b82" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#f1e05a" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#f1e05a" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Stars</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#f1e05a" style="text-transform: uppercase;">stars</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ff4b82" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ff4b82" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ff4b82" style="filter: drop-shadow(0 0 5px #ff4b82)">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#f1e05a" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#f1e05a" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#f1e05a" style="filter: drop-shadow(0 0 5px #f1e05a)">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Universal Rizz</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Star GOAT</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="3729.2400000000007" height="4" rx="2" fill="#ff4b82"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="72" height="4" rx="2" fill="#f1e05a"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            20718 pt
+            100
           </text>
         </g>
       </g>
@@ -123,21 +124,21 @@
       <g transform="translate(150, 15)">
         <g class="fade-up" style="animation-delay: 60ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#cd7f32" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#cd7f32" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#58a6ff" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#58a6ff" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Repos</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#58a6ff" style="text-transform: uppercase;">repos</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#cd7f32" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#cd7f32" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#cd7f32" style="filter: drop-shadow(0 0 5px #cd7f32)">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#58a6ff" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#58a6ff" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#58a6ff" style="filter: drop-shadow(0 0 5px #58a6ff)">A</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Fork Enjoyer</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Lowkey Builder</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="72" height="4" rx="2" fill="#cd7f32"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#58a6ff"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            8 pt
+            20
           </text>
         </g>
       </g>
@@ -145,21 +146,21 @@
       <g transform="translate(285, 15)">
         <g class="fade-up" style="animation-delay: 120ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ff4b82" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ff4b82" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ff7b72" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ff7b72" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Followers</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ff7b72" style="text-transform: uppercase;">followers</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ff4b82" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ff4b82" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ff4b82" style="filter: drop-shadow(0 0 5px #ff4b82)">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ff7b72" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ff7b72" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ff7b72" style="filter: drop-shadow(0 0 5px #ff7b72)">SSS</text></g></g>
 
           <!-- Title -->
           <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Main Character</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="7723.4400000000005" height="4" rx="2" fill="#ff4b82"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#ff7b72"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            21454 pt
+            500
           </text>
         </g>
       </g>
@@ -167,21 +168,21 @@
       <g transform="translate(420, 15)">
         <g class="fade-up" style="animation-delay: 180ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#cd7f32" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#cd7f32" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ffa657" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ffa657" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Issues</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ffa657" style="text-transform: uppercase;">issues</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#cd7f32" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#cd7f32" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#cd7f32" style="filter: drop-shadow(0 0 5px #cd7f32)">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ffa657" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ffa657" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ffa657" style="filter: drop-shadow(0 0 5px #ffa657)">B</text></g></g>
 
           <!-- Title -->
           <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Bug NPC</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="45" height="4" rx="2" fill="#cd7f32"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#ffa657"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            5 pt
+            5
           </text>
         </g>
       </g>
@@ -192,18 +193,18 @@
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#a5d6ff" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#a5d6ff" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#a5d6ff" style="text-transform: uppercase;">PR</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#a5d6ff" style="text-transform: uppercase;">prs</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#a5d6ff" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#a5d6ff" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#a5d6ff" style="filter: drop-shadow(0 0 5px #a5d6ff)">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#a5d6ff" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#a5d6ff" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#a5d6ff" style="filter: drop-shadow(0 0 5px #a5d6ff)">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">PR Simp</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Master Chef</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="72" height="4" rx="2" fill="#a5d6ff"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#a5d6ff"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            8 pt
+            100
           </text>
         </g>
       </g>
@@ -211,21 +212,21 @@
       <g transform="translate(690, 15)">
         <g class="fade-up" style="animation-delay: 300ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ff4b82" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ff4b82" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#7ee787" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#7ee787" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Years</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#7ee787" style="text-transform: uppercase;">experience</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ff4b82" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ff4b82" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ff4b82" style="filter: drop-shadow(0 0 5px #ff4b82)">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#7ee787" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#7ee787" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#7ee787" style="filter: drop-shadow(0 0 5px #7ee787)">A</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Ancient One</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Old Head</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="251.99999999999997" height="4" rx="2" fill="#ff4b82"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#7ee787"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            14 pt
+            3
           </text>
         </g>
       </g>
@@ -233,21 +234,21 @@
       <g transform="translate(825, 15)">
         <g class="fade-up" style="animation-delay: 360ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#a0a0a0" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#a0a0a0" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#d299ff" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#d299ff" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#a0a0a0" style="text-transform: uppercase;">Gists</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#d299ff" style="text-transform: uppercase;">gists</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#a0a0a0" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#a0a0a0" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#a0a0a0" style="filter: drop-shadow(0 0 5px #a0a0a0)">A</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#d299ff" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#d299ff" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#d299ff" style="filter: drop-shadow(0 0 5px #d299ff)">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Script Kid</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Code Wizard</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="36" height="4" rx="2" fill="#a0a0a0"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#d299ff"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            8 pt
+            30
           </text>
         </g>
       </g>
@@ -255,21 +256,21 @@
       <g transform="translate(15, 190)">
         <g class="fade-up" style="animation-delay: 420ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ffb300" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ffb300" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ff69b4" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ff69b4" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ffb300" style="text-transform: uppercase;">Commits</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ff69b4" style="text-transform: uppercase;">commits</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ffb300" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ffb300" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ffb300" style="filter: drop-shadow(0 0 5px #ffb300)">S</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ff69b4" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ff69b4" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ff69b4" style="filter: drop-shadow(0 0 5px #ff69b4)">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Commits No Cap</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Demon Mode</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="52.218" height="4" rx="2" fill="#ffb300"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#ff69b4"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            2901 pt
+            5000
           </text>
         </g>
       </g>
@@ -277,21 +278,21 @@
       <g transform="translate(150, 190)">
         <g class="fade-up" style="animation-delay: 480ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#cd7f32" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#cd7f32" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#3fb950" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#3fb950" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Reviews</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#3fb950" style="text-transform: uppercase;">reviews</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#cd7f32" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#cd7f32" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#cd7f32" style="filter: drop-shadow(0 0 5px #cd7f32)">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#3fb950" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#3fb950" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#3fb950" style="filter: drop-shadow(0 0 5px #3fb950)">B</text></g></g>
 
           <!-- Title -->
           <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Lurker</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="18" height="4" rx="2" fill="#cd7f32"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#3fb950"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            2 pt
+            2
           </text>
         </g>
       </g>
@@ -299,21 +300,21 @@
       <g transform="translate(285, 190)">
         <g class="fade-up" style="animation-delay: 540ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#cd7f32" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#cd7f32" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#bc8cff" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#bc8cff" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Languages</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#bc8cff" style="text-transform: uppercase;">languages</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#cd7f32" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#cd7f32" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#cd7f32" style="filter: drop-shadow(0 0 5px #cd7f32)">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#bc8cff" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#bc8cff" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#bc8cff" style="filter: drop-shadow(0 0 5px #bc8cff)">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Mono-brain</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Lingua God</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="54" height="4" rx="2" fill="#cd7f32"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#bc8cff"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            3 pt
+            12
           </text>
         </g>
       </g>
@@ -321,21 +322,21 @@
       <g transform="translate(420, 190)">
         <g class="fade-up" style="animation-delay: 600ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#30363d" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#30363d" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#333" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#333" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#30363d" style="text-transform: uppercase;">Discussions</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#333" style="text-transform: uppercase;">Rare Achievement</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#30363d" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#30363d" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#30363d" style="filter: drop-shadow(0 0 5px #30363d)">C</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" filter="url(#blurFilter)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#6e7681" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#6e7681" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#6e7681" style="filter: drop-shadow(0 0 5px #6e7681)">?</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Locked</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#555">??? UNKNOWN ???</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="0" height="4" rx="2" fill="#30363d"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            0 pt
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#333"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#444" font-weight="700">
+            ???
           </text>
         </g>
       </g>
@@ -343,21 +344,21 @@
       <g transform="translate(555, 190)">
         <g class="fade-up" style="animation-delay: 660ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ff4b82" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ff4b82" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#d1d5da" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#d1d5da" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Forks</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#d1d5da" style="text-transform: uppercase;">forks</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ff4b82" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ff4b82" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ff4b82" style="filter: drop-shadow(0 0 5px #ff4b82)">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#d1d5da" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#d1d5da" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#d1d5da" style="filter: drop-shadow(0 0 5px #d1d5da)">A</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">The Blueprint</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Forker</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="73459.35" height="4" rx="2" fill="#ff4b82"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#d1d5da"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            163243 pt
+            15
           </text>
         </g>
       </g>
@@ -365,21 +366,21 @@
       <g transform="translate(690, 190)">
         <g class="fade-up" style="animation-delay: 720ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#a0a0a0" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#a0a0a0" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ea4aaa" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ea4aaa" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#a0a0a0" style="text-transform: uppercase;">Sponsors</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#ea4aaa" style="text-transform: uppercase;">sponsors</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#a0a0a0" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#a0a0a0" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#a0a0a0" style="filter: drop-shadow(0 0 5px #a0a0a0)">A</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#ea4aaa" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#ea4aaa" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#ea4aaa" style="filter: drop-shadow(0 0 5px #ea4aaa)">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Patron</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Sugar Parent</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="81" height="4" rx="2" fill="#a0a0a0"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#ea4aaa"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            9 pt
+            5
           </text>
         </g>
       </g>
@@ -387,21 +388,21 @@
       <g transform="translate(825, 190)">
         <g class="fade-up" style="animation-delay: 780ms">
           <!-- Card Body -->
-          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#cd7f32" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#cd7f32" />
+          <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#f9826c" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#f9826c" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Explorer</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="10" fill="#f9826c" style="text-transform: uppercase;">stars_given</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#cd7f32" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#cd7f32" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#cd7f32" style="filter: drop-shadow(0 0 5px #cd7f32)">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)" ><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="#f9826c" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="#f9826c" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="#f9826c" style="filter: drop-shadow(0 0 5px #f9826c)">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Lurker</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Galaxy Collector</text>
           
           <!-- Progress -->
-          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="50.400000000000006" height="4" rx="2" fill="#cd7f32"/>
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="90" height="4" rx="2" fill="#f9826c"/>
           <text x="60" y="152" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
-            56 pt
+            2500
           </text>
         </g>
       </g>

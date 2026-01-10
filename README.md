@@ -1,56 +1,67 @@
-# 🏆 GitHub Trophy: The Ultimate Achievement System
+# 🏆 Ultimate GitHub Trophy System 🏆
+
 A professional, gamified progression system for your GitHub Profile. This isn't just a stat counter—it's a full-featured **XP and Leveling engine** with **Gen Z energy**.
 
-## 🎨 New Styles (9+ Modes)
-| Mode | Description | Preview |
-|------|-------------|---------|
-| `unreal` | Next-gen high fidelity with glassmorphism and dynamic auras. | [Link](?mode=unreal) |
-| `cyberpunk`| Neon glitch aesthetic with futuristic polygons. | [Link](?mode=cyberpunk) |
-| `glass` | Modern frosted glass with soft blurs and vibrant colors. | [Link](?mode=glass) |
-| `terminal` | Retro hacker terminal with ASCII-style progress bars. | [Link](?mode=terminal) |
-| `minecraft`| Blocky RPG look with dirt/stone textures. | [Link](?mode=minecraft) |
-| `nostalgic`| 8-bit arcade vibes with CRT scanlines. | [Link](?mode=nostalgic) |
-| `traditional`| Distinguished veteran on old-world parchment. | [Link](?mode=traditional) |
-| `sketch` | Hand-drawn pencil look for the artistic dev. | [Link](?mode=sketch) |
-| `2d` | High-readability clean minimalist look. | [Link](?mode=2d) |
+---
 
-## 🕹 Usage
-Embed the following in your GitHub README:
+## 🎨 Choose Your Style (9 Modes)
+We support **9 distinct rendering modes** to perfectly match your portfolio aesthetic.
+
+| Style | Description | Preview |
+|-------|-------------|---------|
+| **Glass** | `mode=glass` | ![Glass](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=glass) |
+| **Terminal** | `mode=terminal` | ![Terminal](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=terminal) |
+| **Unreal** | `mode=unreal` | ![Unreal](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=unreal) |
+| **Cyberpunk**| `mode=cyberpunk`| ![Cyberpunk](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=cyberpunk) |
+| **Minecraft**| `mode=minecraft`| ![Minecraft](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=minecraft) |
+| **Nostalgic**| `mode=nostalgic`| ![Nostalgic](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=nostalgic) |
+| **Traditional**| `mode=traditional`| ![Traditional](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=traditional) |
+| **Sketch** | `mode=sketch` | ![Sketch](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=sketch) |
+| **2D Clean** | `mode=2d` | ![2D](https://github-profile-svg.vercel.app/api/profile?username=varadscript&mode=2d) |
+
+---
+
+## 🔒 Secret & Rare Trophies
+Some accomplishments are too rare to be shown immediately. These are **blurred** and marked with **"???"** until you reach at least the **Silver Tier**.
+
+*   **Forks**: Reach Silver to reveal "The Blueprint".
+*   **Discussions**: Join the community to unlock "Giga Chad".
+*   **Sponsors**: Support creators to unlock "Sugar Parent".
+
+> **Tip:** You can force show these blurred trophies by adding `&showHidden=true` to your URL.
+
+---
+
+## 🕹 Usage Instructions
+
+Copy this into your `README.md`:
 
 ```markdown
 ![My Trophies](https://your-domain.vercel.app/api/profile?username=YOUR_USERNAME&mode=glass&theme=dark)
 ```
 
-## 🚀 How to Contribute
-We love new themes and trophy ideas! Here is how you can help:
+### ⚙️ Query Parameters
+| Parameter | Default | Options |
+|-----------|---------|---------|
+| `username` | (Required) | Your GitHub Username |
+| `mode` | `unreal` | `glass`, `terminal`, `minecraft`, `cyberpunk`, `traditional`, `nostalgic`, `sketch`, `2d` |
+| `theme` | `dark` | `dark`, `light` |
+| `showLocked` | `false` | Set `true` to show all 14 trophy slots |
+| `showHidden` | `false` | Set `true` to show blurred rare trophies |
+
+---
+
+## 🚀 Contribution Guide
 
 ### 1. Add a New Theme
 1.  Open `themes/trophyRenderer.js`.
-2.  Add weights to the `fontFamily` and `cardStyles` objects.
-3.  Implement your own SVG logic inside `getTrophyCup`.
-4.  Test it by adding your mode to the `modes` array in `generate-tests.js` and running `node generate-tests.js`.
+2.  Define your own logic inside `getTrophyCup` and `cardStyles`.
+3.  Test it by adding your mode to `generate-tests.js`.
 
-### 2. Add a New Trophy Category
+### 2. Update Milestones
 1.  Open `utils/github.js`.
-2.  Add your category to `TROPHY_TITLES` (Don't forget the **Gen Z slang!**).
-3.  Add milestones to `MILESTONES`.
-4.  Update `fetchDetailedStats` to fetch the new metric from the GitHub API.
-5.  Push it to the `trophies` array in `fetchTrophyData`.
-
-## 📈 XP Point Table (Gen Z Edition)
-| Category | Slang Level | Milestones |
-|----------|-------------|------------|
-| **Stars** | NPC → Galaxy Brain → Universal Rizz | 1 / 100 / 500 |
-| **Commits**| Casual → Grinder → Demon Mode | 10 / 1000 / 5000 |
-| **Gists** | Note Taker → Script Kid → Gist God | 1 / 20 / 50 |
-| **Reviews**| Lurker → Vibe Checker → Final Boss | 1 / 50 / 150 |
-| **Followers**| Ghosted → Valid → Main Character | 1 / 60 / 250 |
-
-## 🛠 Deployment
-1. **Fork** this repo.
-2. Import to **Vercel**.
-3. Add `GITHUB_TOKEN` for higher rate limits.
-4. **Deploy** and flex your trophies!
+2.  Adjust `MILESTONES` to change difficulty levels.
+3.  Add new category titles in `TROPHY_TITLES` (Keep it Gen Z!).
 
 ---
-Built with ❤️ for the GitHub Community.
+Built with ❤️ for the Dev Community.
