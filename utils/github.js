@@ -9,7 +9,8 @@ const TROPHY_TITLES = {
     repos: ['Repo Creator', 'Middle Repo Creator', 'Hyper Repo Creator', 'Repo Titan'],
     prs: ['First PR', 'PR User', 'PR Hunter', 'PR Master'],
     issues: ['First Issue', 'Issuer', 'High Issuer', 'Bug Slayer'],
-    experience: ['Newcomer', 'Developer', 'Veteran', 'OG Developer']
+    experience: ['Newcomer', 'Developer', 'Veteran', 'OG Developer'],
+    gists: ['Script Kid', 'Gist Maker', 'Open Sourcerer', 'Gist Legend']
 };
 
 /**
@@ -21,7 +22,8 @@ const MILESTONES = {
     repos: [1, 10, 30, 100],
     prs: [1, 10, 50, 200],
     issues: [1, 10, 50, 200],
-    experience: [0, 1, 3, 5]
+    experience: [0, 1, 3, 5],
+    gists: [1, 5, 20, 50]
 };
 
 const TIER_LABELS = ['BRONZE', 'SILVER', 'GOLD', 'LEGENDARY'];
@@ -108,7 +110,8 @@ async function fetchTrophyData(username) {
             getMetricTrophy('followers', user.followers, { label: 'Followers' }),
             getMetricTrophy('issues', issues, { label: 'Issues' }),
             getMetricTrophy('prs', prs, { label: 'PR' }),
-            getMetricTrophy('experience', accountAgeYears, { label: 'Years' })
+            getMetricTrophy('experience', accountAgeYears, { label: 'Years' }),
+            getMetricTrophy('gists', user.public_gists, { label: 'Gists' })
         ];
 
         return {

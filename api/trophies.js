@@ -6,7 +6,8 @@ module.exports = async (req, res) => {
         username,
         theme = 'dark',
         animation = 'on',
-        showLocked = 'false' // Changed to false for clean horizontal row look
+        showLocked = 'false',
+        mode = '2d' // Default mode
     } = req.query;
 
     res.setHeader('Content-Type', 'image/svg+xml');
@@ -23,7 +24,8 @@ module.exports = async (req, res) => {
         const svg = renderTrophySVG(data, {
             theme,
             animation,
-            showLocked
+            showLocked,
+            mode
         });
 
         return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?>' + svg);

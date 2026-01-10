@@ -1,0 +1,340 @@
+<svg width="744" height="336" viewBox="0 0 744 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .fade-up { opacity: 0; animation: fadeUpAnim 0.6s ease-out forwards; }
+          @keyframes fadeUpAnim { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        </style>
+        
+        
+
+        
+      </defs>
+      
+      <rect width="100%" height="100%" fill="none"/>
+      
+      
+      <g transform="translate(12, 12)">
+        <g class="fade-up" style="animation-delay: 0ms">
+          <!-- Card Body -->
+          
+            <rect width="110" height="150" rx="6" fill="#161b22" stroke="#444c56" stroke-width="1"/>
+          
+          
+          <!-- Category Label -->
+          <text x="55" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#ff4b82" style="">STARS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(55, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" >
+        
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="#ff4b82" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="#ff4b82" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="#ff4b82" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          SSS
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="55" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">God Stargazer</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="80" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="3314.8800000000006" height="4" rx="2" fill="#ff4b82"/>
+      
+          <text x="55" y="145" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            20718pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(134, 12)">
+        <g class="fade-up" style="animation-delay: 120ms">
+          <!-- Card Body -->
+          
+            <rect width="110" height="150" rx="6" fill="#161b22" stroke="#444c56" stroke-width="1"/>
+          
+          
+          <!-- Category Label -->
+          <text x="55" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#cd7f32" style="">REPOS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(55, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" >
+        
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="#cd7f32" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="#cd7f32" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="#cd7f32" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          B
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="55" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">Repo Creator</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="80" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="64" height="4" rx="2" fill="#cd7f32"/>
+      
+          <text x="55" y="145" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            8pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(256, 12)">
+        <g class="fade-up" style="animation-delay: 240ms">
+          <!-- Card Body -->
+          
+            <rect width="110" height="150" rx="6" fill="#161b22" stroke="#444c56" stroke-width="1"/>
+          
+          
+          <!-- Category Label -->
+          <text x="55" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#ff4b82" style="">FOLLOWERS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(55, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" >
+        
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="#ff4b82" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="#ff4b82" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="#ff4b82" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          SSS
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="55" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">Community Idol</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="80" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="6865.280000000001" height="4" rx="2" fill="#ff4b82"/>
+      
+          <text x="55" y="145" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            21454pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(378, 12)">
+        <g class="fade-up" style="animation-delay: 360ms">
+          <!-- Card Body -->
+          
+            <rect width="110" height="150" rx="6" fill="#161b22" stroke="#444c56" stroke-width="1"/>
+          
+          
+          <!-- Category Label -->
+          <text x="55" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#cd7f32" style="">ISSUES</text>
+
+          <!-- Trophy -->
+          <g transform="translate(55, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" >
+        
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="#cd7f32" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="#cd7f32" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="#cd7f32" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          B
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="55" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">First Issue</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="80" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="40" height="4" rx="2" fill="#cd7f32"/>
+      
+          <text x="55" y="145" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            5pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(500, 12)">
+        <g class="fade-up" style="animation-delay: 480ms">
+          <!-- Card Body -->
+          
+            <rect width="110" height="150" rx="6" fill="#161b22" stroke="#444c56" stroke-width="1"/>
+          
+          
+          <!-- Category Label -->
+          <text x="55" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#cd7f32" style="">PR</text>
+
+          <!-- Trophy -->
+          <g transform="translate(55, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" >
+        
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="#cd7f32" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="#cd7f32" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="#cd7f32" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          B
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="55" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">First PR</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="80" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="64" height="4" rx="2" fill="#cd7f32"/>
+      
+          <text x="55" y="145" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            8pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(622, 12)">
+        <g class="fade-up" style="animation-delay: 600ms">
+          <!-- Card Body -->
+          
+            <rect width="110" height="150" rx="6" fill="#161b22" stroke="#444c56" stroke-width="1"/>
+          
+          
+          <!-- Category Label -->
+          <text x="55" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#ff4b82" style="">YEARS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(55, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" >
+        
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="#ff4b82" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="#ff4b82" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="#ff4b82" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          SSS
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="55" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">OG Developer</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="80" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="224" height="4" rx="2" fill="#ff4b82"/>
+      
+          <text x="55" y="145" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            14pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(12, 174)">
+        <g class="fade-up" style="animation-delay: 720ms">
+          <!-- Card Body -->
+          
+            <rect width="110" height="150" rx="6" fill="#161b22" stroke="#444c56" stroke-width="1"/>
+          
+          
+          <!-- Category Label -->
+          <text x="55" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#a0a0a0" style="">GISTS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(55, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" >
+        
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#a0a0a0" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="#a0a0a0" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="#a0a0a0" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="#a0a0a0" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#a0a0a0" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#a0a0a0" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          A
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="55" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">Gist Maker</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="80" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="32" height="4" rx="2" fill="#a0a0a0"/>
+      
+          <text x="55" y="145" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            8pt
+          </text>
+        </g>
+      </g>
+    
+
+      
+    </svg>

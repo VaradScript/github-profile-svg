@@ -22,7 +22,8 @@ Embed the following in your GitHub README:
 | `username`| Required| Your GitHub username |
 | `theme`   | `dark`  | `dark` or `light` |
 | `animation`| `on`   | Toggle animations (`on`/`off`) |
-| `showLocked`| `true` | Show trophies that haven't reached Bronze yet |
+| `showLocked`| `false`| Show trophies that haven't reached Bronze yet |
+| `mode`     | `2d`    | `2d`, `unreal`, or `nostalgic` (Retro Look) |
 | `showHidden`| `false`| Reveal secret trophies even if not earned |
 
 ## 📊 XP Point Table

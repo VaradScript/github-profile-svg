@@ -1,0 +1,424 @@
+<svg width="804" height="356" viewBox="0 0 804 356" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .fade-up { opacity: 0; animation: fadeUpAnim 0.6s ease-out forwards; }
+          @keyframes fadeUpAnim { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        </style>
+        
+        
+          <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+            <feOffset dx="0" dy="4" result="offsetblur" />
+            <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+            <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+          </filter>
+          <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.2" />
+            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+          </linearGradient>
+          
+            <filter id="glow-LEGENDARY" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" />
+              <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+          
+            <filter id="glow-GOLD" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" />
+              <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+          
+            <filter id="glow-SILVER" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" />
+              <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+          
+            <filter id="glow-BRONZE" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" />
+              <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+          
+            <filter id="glow-LOCKED" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" />
+              <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+          
+        
+
+        
+      </defs>
+      
+      <rect width="100%" height="100%" fill="none"/>
+      
+      
+      <g transform="translate(12, 12)">
+        <g class="fade-up" style="animation-delay: 0ms">
+          <!-- Card Body -->
+          
+            <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" />
+            <rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="2" />
+          
+          
+          <!-- Category Label -->
+          <text x="60" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#ff4b82" style="">STARS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-LEGENDARY)">
+        <defs>
+          <radialGradient id="grad-LEGENDARY" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" />
+            <stop offset="100%" style="stop-color:#ff4b82;stop-opacity:1" />
+          </radialGradient>
+        </defs>
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-LEGENDARY)" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-LEGENDARY)" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-LEGENDARY)" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          SSS
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="60" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">God Stargazer</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="90" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="3729.2400000000007" height="4" rx="2" fill="#ff4b82"/>
+      
+          <text x="60" y="150" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            20718pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(144, 12)">
+        <g class="fade-up" style="animation-delay: 120ms">
+          <!-- Card Body -->
+          
+            <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" />
+            <rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="2" />
+          
+          
+          <!-- Category Label -->
+          <text x="60" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#cd7f32" style="">REPOS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)">
+        <defs>
+          <radialGradient id="grad-BRONZE" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" />
+            <stop offset="100%" style="stop-color:#cd7f32;stop-opacity:1" />
+          </radialGradient>
+        </defs>
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE)" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE)" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE)" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          B
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="60" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">Repo Creator</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="90" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="72" height="4" rx="2" fill="#cd7f32"/>
+      
+          <text x="60" y="150" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            8pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(276, 12)">
+        <g class="fade-up" style="animation-delay: 240ms">
+          <!-- Card Body -->
+          
+            <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" />
+            <rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="2" />
+          
+          
+          <!-- Category Label -->
+          <text x="60" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#ff4b82" style="">FOLLOWERS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-LEGENDARY)">
+        <defs>
+          <radialGradient id="grad-LEGENDARY" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" />
+            <stop offset="100%" style="stop-color:#ff4b82;stop-opacity:1" />
+          </radialGradient>
+        </defs>
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-LEGENDARY)" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-LEGENDARY)" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-LEGENDARY)" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          SSS
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="60" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">Community Idol</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="90" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="7723.4400000000005" height="4" rx="2" fill="#ff4b82"/>
+      
+          <text x="60" y="150" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            21454pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(408, 12)">
+        <g class="fade-up" style="animation-delay: 360ms">
+          <!-- Card Body -->
+          
+            <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" />
+            <rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="2" />
+          
+          
+          <!-- Category Label -->
+          <text x="60" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#cd7f32" style="">ISSUES</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)">
+        <defs>
+          <radialGradient id="grad-BRONZE" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" />
+            <stop offset="100%" style="stop-color:#cd7f32;stop-opacity:1" />
+          </radialGradient>
+        </defs>
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE)" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE)" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE)" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          B
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="60" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">First Issue</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="90" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="45" height="4" rx="2" fill="#cd7f32"/>
+      
+          <text x="60" y="150" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            5pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(540, 12)">
+        <g class="fade-up" style="animation-delay: 480ms">
+          <!-- Card Body -->
+          
+            <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" />
+            <rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="2" />
+          
+          
+          <!-- Category Label -->
+          <text x="60" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#cd7f32" style="">PR</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)">
+        <defs>
+          <radialGradient id="grad-BRONZE" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" />
+            <stop offset="100%" style="stop-color:#cd7f32;stop-opacity:1" />
+          </radialGradient>
+        </defs>
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE)" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE)" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE)" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          B
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="60" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">First PR</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="90" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="72" height="4" rx="2" fill="#cd7f32"/>
+      
+          <text x="60" y="150" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            8pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(672, 12)">
+        <g class="fade-up" style="animation-delay: 600ms">
+          <!-- Card Body -->
+          
+            <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" />
+            <rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="2" />
+          
+          
+          <!-- Category Label -->
+          <text x="60" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#ff4b82" style="">YEARS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-LEGENDARY)">
+        <defs>
+          <radialGradient id="grad-LEGENDARY" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" />
+            <stop offset="100%" style="stop-color:#ff4b82;stop-opacity:1" />
+          </radialGradient>
+        </defs>
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-LEGENDARY)" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-LEGENDARY)" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-LEGENDARY)" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          SSS
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="60" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">OG Developer</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="90" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="251.99999999999997" height="4" rx="2" fill="#ff4b82"/>
+      
+          <text x="60" y="150" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            14pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(12, 184)">
+        <g class="fade-up" style="animation-delay: 720ms">
+          <!-- Card Body -->
+          
+            <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" />
+            <rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="2" />
+          
+          
+          <!-- Category Label -->
+          <text x="60" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="11" fill="#a0a0a0" style="">GISTS</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 65)">
+             
+      <g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-SILVER)">
+        <defs>
+          <radialGradient id="grad-SILVER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" />
+            <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:1" />
+          </radialGradient>
+        </defs>
+        <!-- Laurel -->
+        <path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#a0a0a0" stroke-width="2.5" opacity="0.4"/>
+        <!-- Trophy Body -->
+        <path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-SILVER)" />
+        <path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-SILVER)" />
+        <path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-SILVER)" />
+        <!-- Handles -->
+        <path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#a0a0a0" stroke-width="3" />
+        <path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#a0a0a0" stroke-width="3" />
+        <!-- Rank -->
+        <text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">
+          A
+        </text>
+      </g>
+    
+          </g>
+
+          <!-- Title -->
+          <text x="60" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="600" font-size="10" fill="#c9d1d9">Gist Maker</text>
+          
+          <!-- Progress -->
+          
+        <rect x="15" y="132" width="90" height="4" rx="2" fill="#30363d"/>
+        <rect x="15" y="132" width="36" height="4" rx="2" fill="#a0a0a0"/>
+      
+          <text x="60" y="150" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+            8pt
+          </text>
+        </g>
+      </g>
+    
+
+      
+    </svg>
