@@ -150,7 +150,7 @@ async function fetchTrophyData(username) {
     try {
         const response = await axios.get(`https://api.github.com/users/${username}`, { headers });
         const user = response.data;
-        const { stars, prs, issues, commits, reviews, languages, discussions, forks, stars_given } = await fetchDetailedStats(username, headers);
+        const { stars, prs, issues, commits, reviews, languages, discussions, forks, stars_given, sponsors } = await fetchDetailedStats(username, headers);
         const accountAgeYears = Math.floor((new Date() - new Date(user.created_at)) / (1000 * 60 * 60 * 24 * 365));
 
         const trophies = [
@@ -166,7 +166,7 @@ async function fetchTrophyData(username) {
             getMetricTrophy('languages', languages, { label: 'Languages' }),
             getMetricTrophy('discussions', discussions, { label: 'Discussions' }),
             getMetricTrophy('forks', forks, { label: 'Forks' }),
-            getMetricTrophy('sponsors', user.following, { label: 'Sponsors' }), // Using following as proxy for active engagement
+            getMetricTrophy('sponsors', sponsors, { label: 'Sponsors' }),
             getMetricTrophy('stars_given', stars_given, { label: 'Explorer' })
         ];
 
