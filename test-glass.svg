@@ -101,20 +101,20 @@
       <g transform="translate(15, 15)">
         <g class="fade-up" style="animation-delay: 0ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Stars</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Stars</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-LEGENDARY)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-LEGENDARY-Stars)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-LEGENDARY-Stars)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-LEGENDARY-Stars)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ff4b82)">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Universal Rizz</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Universal Rizz</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="3729.2400000000007" height="4" rx="2" fill="#ff4b82"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             20718 pt
           </text>
         </g>
@@ -123,20 +123,20 @@
       <g transform="translate(150, 15)">
         <g class="fade-up" style="animation-delay: 60ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Repos</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Repos</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE-Repos)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE-Repos)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE-Repos)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #cd7f32)">B</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Fork Enjoyer</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Fork Enjoyer</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="72" height="4" rx="2" fill="#cd7f32"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             8 pt
           </text>
         </g>
@@ -145,20 +145,20 @@
       <g transform="translate(285, 15)">
         <g class="fade-up" style="animation-delay: 120ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Followers</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Followers</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-LEGENDARY)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-LEGENDARY-Followers)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-LEGENDARY-Followers)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-LEGENDARY-Followers)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ff4b82)">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Main Character</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Main Character</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="7723.4400000000005" height="4" rx="2" fill="#ff4b82"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             21454 pt
           </text>
         </g>
@@ -167,20 +167,20 @@
       <g transform="translate(420, 15)">
         <g class="fade-up" style="animation-delay: 180ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Issues</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Issues</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE-Issues)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE-Issues)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE-Issues)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #cd7f32)">B</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Bug NPC</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Bug NPC</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="45" height="4" rx="2" fill="#cd7f32"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             5 pt
           </text>
         </g>
@@ -189,20 +189,20 @@
       <g transform="translate(555, 15)">
         <g class="fade-up" style="animation-delay: 240ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#a5d6ff" style="text-transform: uppercase;">PR</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#a5d6ff" style="text-transform: uppercase;">PR</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#a5d6ff" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE-PR)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE-PR)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE-PR)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#a5d6ff" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#a5d6ff" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #a5d6ff)">B</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">PR Simp</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">PR Simp</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="72" height="4" rx="2" fill="#a5d6ff"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             8 pt
           </text>
         </g>
@@ -211,20 +211,20 @@
       <g transform="translate(690, 15)">
         <g class="fade-up" style="animation-delay: 300ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Years</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Years</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-LEGENDARY)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-LEGENDARY-Years)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-LEGENDARY-Years)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-LEGENDARY-Years)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ff4b82)">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Ancient One</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Ancient One</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="251.99999999999997" height="4" rx="2" fill="#ff4b82"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             14 pt
           </text>
         </g>
@@ -233,20 +233,20 @@
       <g transform="translate(825, 15)">
         <g class="fade-up" style="animation-delay: 360ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#a0a0a0" style="text-transform: uppercase;">Gists</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#a0a0a0" style="text-transform: uppercase;">Gists</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-SILVER)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#a0a0a0" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-SILVER-Gists)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-SILVER-Gists)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-SILVER-Gists)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#a0a0a0" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#a0a0a0" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">A</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #a0a0a0)">A</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Script Kid</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Script Kid</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="36" height="4" rx="2" fill="#a0a0a0"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             8 pt
           </text>
         </g>
@@ -255,20 +255,20 @@
       <g transform="translate(15, 190)">
         <g class="fade-up" style="animation-delay: 420ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#ffb300" style="text-transform: uppercase;">Commits</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ffb300" style="text-transform: uppercase;">Commits</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-GOLD)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ffb300" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-GOLD-Commits)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-GOLD-Commits)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-GOLD-Commits)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ffb300" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ffb300" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">S</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ffb300)">S</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Commits No Cap</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Commits No Cap</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="52.218" height="4" rx="2" fill="#ffb300"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             2901 pt
           </text>
         </g>
@@ -277,20 +277,20 @@
       <g transform="translate(150, 190)">
         <g class="fade-up" style="animation-delay: 480ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Reviews</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Reviews</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE-Reviews)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE-Reviews)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE-Reviews)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #cd7f32)">B</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Lurker</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Lurker</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="18" height="4" rx="2" fill="#cd7f32"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             2 pt
           </text>
         </g>
@@ -299,20 +299,20 @@
       <g transform="translate(285, 190)">
         <g class="fade-up" style="animation-delay: 540ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Languages</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Languages</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE-Languages)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE-Languages)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE-Languages)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #cd7f32)">B</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Mono-brain</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Mono-brain</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="54" height="4" rx="2" fill="#cd7f32"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             3 pt
           </text>
         </g>
@@ -321,20 +321,20 @@
       <g transform="translate(420, 190)">
         <g class="fade-up" style="animation-delay: 600ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#30363d" style="text-transform: uppercase;">Discussions</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#30363d" style="text-transform: uppercase;">Discussions</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-LOCKED)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#30363d" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-LOCKED-Discussions)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-LOCKED-Discussions)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-LOCKED-Discussions)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#30363d" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#30363d" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">C</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #30363d)">C</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Locked</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Locked</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="0" height="4" rx="2" fill="#30363d"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             0 pt
           </text>
         </g>
@@ -343,20 +343,20 @@
       <g transform="translate(555, 190)">
         <g class="fade-up" style="animation-delay: 660ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Forks</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Forks</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-LEGENDARY)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#ff4b82" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-LEGENDARY-Forks)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-LEGENDARY-Forks)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-LEGENDARY-Forks)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#ff4b82" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#ff4b82" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">SSS</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #ff4b82)">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">The Blueprint</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">The Blueprint</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="73459.35" height="4" rx="2" fill="#ff4b82"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             163243 pt
           </text>
         </g>
@@ -365,20 +365,20 @@
       <g transform="translate(690, 190)">
         <g class="fade-up" style="animation-delay: 720ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#a0a0a0" style="text-transform: uppercase;">Sponsors</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#a0a0a0" style="text-transform: uppercase;">Sponsors</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-SILVER)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#a0a0a0" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-SILVER-Sponsors)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-SILVER-Sponsors)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-SILVER-Sponsors)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#a0a0a0" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#a0a0a0" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">A</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #a0a0a0)">A</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Patron</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Patron</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="81" height="4" rx="2" fill="#a0a0a0"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             9 pt
           </text>
         </g>
@@ -387,20 +387,20 @@
       <g transform="translate(825, 190)">
         <g class="fade-up" style="animation-delay: 780ms">
           <!-- Card Body -->
-          <rect width="120" height="160" rx="12" fill="#161b22" opacity="0.8" filter="url(#cardShadow)" /><rect width="120" height="160" rx="12" fill="none" stroke="url(#cardGrad)" stroke-width="1.5" />
+          <rect width="120" height="160" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="16" />
           
           <!-- Category -->
-          <text x="60" y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Explorer</text>
+          <text x="60" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Explorer</text>
 
           <!-- Trophy -->
-          <g transform="translate(60, 70)"><g transform="translate(-30, -30) scale(0.85)" filter="url(#glow-BRONZE)"><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="#cd7f32" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="url(#grad-BRONZE-Explorer)" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="url(#grad-BRONZE-Explorer)" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="url(#grad-BRONZE-Explorer)" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="#cd7f32" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="#cd7f32" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#000">B</text></g></g>
+          <g transform="translate(60, 70)"><g transform="translate(-30, -30)"><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px #cd7f32)">B</text></g></g>
 
           <!-- Title -->
-          <text x="60" y="122" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="9" fill="#c9d1d9">Lurker</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff">Lurker</text>
           
           <!-- Progress -->
           <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="50.400000000000006" height="4" rx="2" fill="#cd7f32"/>
-          <text x="60" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#8b949e" font-weight="700">
+          <text x="60" y="152" text-anchor="middle" font-family="Inter" font-size="9" fill="#8b949e" font-weight="700">
             56 pt
           </text>
         </g>

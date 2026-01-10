@@ -1,281 +1,410 @@
-<svg width="744" height="336" viewBox="0 0 744 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="960" height="365" viewBox="0 0 960 365" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Inter:wght@400;800&amp;display=swap" rel="stylesheet" />
         <style>
           .fade-up { opacity: 0; animation: fadeUpAnim 0.6s ease-out forwards; }
-          @keyframes fadeUpAnim { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+          @keyframes fadeUpAnim { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+          .glitch-line { animation: glitch 2s infinite; }
+          @keyframes glitch { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         </style>
+        <filter id="cardShadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/></filter>
+        <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" /><stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" /></linearGradient>
+        <filter id="glow-LEGENDARY" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-GOLD" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-SILVER" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-BRONZE" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-LOCKED" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter>
         
+          <radialGradient id="grad-LEGENDARY-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-STARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
         
-
+          <radialGradient id="grad-LEGENDARY-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-REPOS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" /></radialGradient>
         
-          <pattern id="scanlines" width="100%" height="2" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="100%" y2="0" stroke="black" stroke-width="0.5" opacity="0.2" />
-          </pattern>
+          <radialGradient id="grad-LEGENDARY-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-FOLLOWERS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff7b72;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-ISSUES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ffa657;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-PR" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#a5d6ff;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-YEARS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#7ee787;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-GISTS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d299ff;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-COMMITS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-REVIEWS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#3fb950;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-LANGUAGES" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#bc8cff;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-DISCUSSIONS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#6e7681;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-FORKS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#d1d5da;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-SPONSORS" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#ea4aaa;stop-opacity:1" /></radialGradient>
+        
+          <radialGradient id="grad-LEGENDARY-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-GOLD-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-SILVER-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-BRONZE-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
+          <radialGradient id="grad-LOCKED-EXPLORER" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f9826c;stop-opacity:1" /></radialGradient>
         
       </defs>
-      
       <rect width="100%" height="100%" fill="none"/>
       
-      
-      <g transform="translate(12, 12)">
+      <g transform="translate(15, 15)">
         <g class="fade-up" style="animation-delay: 0ms">
           <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
           
-            <rect width="110" height="150" rx="0" fill="#161b22" stroke="#444c56" stroke-width="2"/>
-          
-          
-          <!-- Category Label -->
-          <text x="55" y="20" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#ff4b82" style="letter-spacing: 1px">STARS</text>
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Stars</text>
 
           <!-- Trophy -->
-          <g transform="translate(55, 65)">
-             
-        <g transform="translate(-25, -25)">
-          <rect x="15" y="10" width="20" height="15" fill="#ff4b82" />
-          <rect x="10" y="10" width="5" height="10" fill="#ff4b82" />
-          <rect x="35" y="10" width="5" height="10" fill="#ff4b82" />
-          <rect x="22" y="25" width="6" height="10" fill="#ff4b82" />
-          <rect x="18" y="35" width="14" height="5" fill="#ff4b82" />
-          <text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">
-            SSS
-          </text>
-        </g>
-      
-          </g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#ff4b82" /><rect x="10" y="10" width="5" height="10" fill="#ff4b82" /><rect x="35" y="10" width="5" height="10" fill="#ff4b82" /><rect x="22" y="25" width="6" height="10" fill="#ff4b82" /><rect x="18" y="35" width="14" height="5" fill="#ff4b82" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="55" y="112" text-anchor="middle" font-family="Courier New, monospace" font-weight="600" font-size="8" fill="#c9d1d9">God Stargazer</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Universal Rizz</text>
           
           <!-- Progress -->
-          <rect x="16" y="132" width="6" height="6" fill="#ff4b82" /><rect x="24" y="132" width="6" height="6" fill="#ff4b82" /><rect x="32" y="132" width="6" height="6" fill="#ff4b82" /><rect x="40" y="132" width="6" height="6" fill="#ff4b82" /><rect x="48" y="132" width="6" height="6" fill="#ff4b82" /><rect x="56" y="132" width="6" height="6" fill="#ff4b82" /><rect x="64" y="132" width="6" height="6" fill="#ff4b82" /><rect x="72" y="132" width="6" height="6" fill="#ff4b82" /><rect x="80" y="132" width="6" height="6" fill="#ff4b82" /><rect x="88" y="132" width="6" height="6" fill="#ff4b82" />
-          <text x="55" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#8b949e" font-weight="700">
-            20718pt
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="3729.2400000000007" height="4" rx="2" fill="#ff4b82"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            20718 pt
           </text>
         </g>
       </g>
     
-      <g transform="translate(134, 12)">
+      <g transform="translate(150, 15)">
+        <g class="fade-up" style="animation-delay: 60ms">
+          <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
+          
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Repos</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#cd7f32" /><rect x="10" y="10" width="5" height="10" fill="#cd7f32" /><rect x="35" y="10" width="5" height="10" fill="#cd7f32" /><rect x="22" y="25" width="6" height="10" fill="#cd7f32" /><rect x="18" y="35" width="14" height="5" fill="#cd7f32" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">B</text></g></g>
+
+          <!-- Title -->
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Fork Enjoyer</text>
+          
+          <!-- Progress -->
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="72" height="4" rx="2" fill="#cd7f32"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            8 pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(285, 15)">
         <g class="fade-up" style="animation-delay: 120ms">
           <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
           
-            <rect width="110" height="150" rx="0" fill="#161b22" stroke="#444c56" stroke-width="2"/>
-          
-          
-          <!-- Category Label -->
-          <text x="55" y="20" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#cd7f32" style="letter-spacing: 1px">REPOS</text>
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Followers</text>
 
           <!-- Trophy -->
-          <g transform="translate(55, 65)">
-             
-        <g transform="translate(-25, -25)">
-          <rect x="15" y="10" width="20" height="15" fill="#cd7f32" />
-          <rect x="10" y="10" width="5" height="10" fill="#cd7f32" />
-          <rect x="35" y="10" width="5" height="10" fill="#cd7f32" />
-          <rect x="22" y="25" width="6" height="10" fill="#cd7f32" />
-          <rect x="18" y="35" width="14" height="5" fill="#cd7f32" />
-          <text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">
-            B
-          </text>
-        </g>
-      
-          </g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#ff4b82" /><rect x="10" y="10" width="5" height="10" fill="#ff4b82" /><rect x="35" y="10" width="5" height="10" fill="#ff4b82" /><rect x="22" y="25" width="6" height="10" fill="#ff4b82" /><rect x="18" y="35" width="14" height="5" fill="#ff4b82" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">SSS</text></g></g>
 
           <!-- Title -->
-          <text x="55" y="112" text-anchor="middle" font-family="Courier New, monospace" font-weight="600" font-size="8" fill="#c9d1d9">Repo Creator</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Main Character</text>
           
           <!-- Progress -->
-          <rect x="16" y="132" width="6" height="6" fill="#cd7f32" /><rect x="24" y="132" width="6" height="6" fill="#cd7f32" /><rect x="32" y="132" width="6" height="6" fill="#cd7f32" /><rect x="40" y="132" width="6" height="6" fill="#cd7f32" /><rect x="48" y="132" width="6" height="6" fill="#cd7f32" /><rect x="56" y="132" width="6" height="6" fill="#cd7f32" /><rect x="64" y="132" width="6" height="6" fill="#cd7f32" /><rect x="72" y="132" width="6" height="6" fill="#cd7f32" /><rect x="80" y="132" width="6" height="6" fill="#333" /><rect x="88" y="132" width="6" height="6" fill="#333" />
-          <text x="55" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#8b949e" font-weight="700">
-            8pt
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="7723.4400000000005" height="4" rx="2" fill="#ff4b82"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            21454 pt
           </text>
         </g>
       </g>
     
-      <g transform="translate(256, 12)">
+      <g transform="translate(420, 15)">
+        <g class="fade-up" style="animation-delay: 180ms">
+          <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
+          
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Issues</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#cd7f32" /><rect x="10" y="10" width="5" height="10" fill="#cd7f32" /><rect x="35" y="10" width="5" height="10" fill="#cd7f32" /><rect x="22" y="25" width="6" height="10" fill="#cd7f32" /><rect x="18" y="35" width="14" height="5" fill="#cd7f32" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">B</text></g></g>
+
+          <!-- Title -->
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Bug NPC</text>
+          
+          <!-- Progress -->
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="45" height="4" rx="2" fill="#cd7f32"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            5 pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(555, 15)">
         <g class="fade-up" style="animation-delay: 240ms">
           <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
           
-            <rect width="110" height="150" rx="0" fill="#161b22" stroke="#444c56" stroke-width="2"/>
-          
-          
-          <!-- Category Label -->
-          <text x="55" y="20" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#ff4b82" style="letter-spacing: 1px">FOLLOWERS</text>
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#a5d6ff" style="text-transform: uppercase;">PR</text>
 
           <!-- Trophy -->
-          <g transform="translate(55, 65)">
-             
-        <g transform="translate(-25, -25)">
-          <rect x="15" y="10" width="20" height="15" fill="#ff4b82" />
-          <rect x="10" y="10" width="5" height="10" fill="#ff4b82" />
-          <rect x="35" y="10" width="5" height="10" fill="#ff4b82" />
-          <rect x="22" y="25" width="6" height="10" fill="#ff4b82" />
-          <rect x="18" y="35" width="14" height="5" fill="#ff4b82" />
-          <text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">
-            SSS
-          </text>
-        </g>
-      
-          </g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#cd7f32" /><rect x="10" y="10" width="5" height="10" fill="#cd7f32" /><rect x="35" y="10" width="5" height="10" fill="#cd7f32" /><rect x="22" y="25" width="6" height="10" fill="#cd7f32" /><rect x="18" y="35" width="14" height="5" fill="#cd7f32" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">B</text></g></g>
 
           <!-- Title -->
-          <text x="55" y="112" text-anchor="middle" font-family="Courier New, monospace" font-weight="600" font-size="8" fill="#c9d1d9">Community Idol</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">PR Simp</text>
           
           <!-- Progress -->
-          <rect x="16" y="132" width="6" height="6" fill="#ff4b82" /><rect x="24" y="132" width="6" height="6" fill="#ff4b82" /><rect x="32" y="132" width="6" height="6" fill="#ff4b82" /><rect x="40" y="132" width="6" height="6" fill="#ff4b82" /><rect x="48" y="132" width="6" height="6" fill="#ff4b82" /><rect x="56" y="132" width="6" height="6" fill="#ff4b82" /><rect x="64" y="132" width="6" height="6" fill="#ff4b82" /><rect x="72" y="132" width="6" height="6" fill="#ff4b82" /><rect x="80" y="132" width="6" height="6" fill="#ff4b82" /><rect x="88" y="132" width="6" height="6" fill="#ff4b82" />
-          <text x="55" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#8b949e" font-weight="700">
-            21454pt
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="72" height="4" rx="2" fill="#a5d6ff"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            8 pt
           </text>
         </g>
       </g>
     
-      <g transform="translate(378, 12)">
+      <g transform="translate(690, 15)">
+        <g class="fade-up" style="animation-delay: 300ms">
+          <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
+          
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Years</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#ff4b82" /><rect x="10" y="10" width="5" height="10" fill="#ff4b82" /><rect x="35" y="10" width="5" height="10" fill="#ff4b82" /><rect x="22" y="25" width="6" height="10" fill="#ff4b82" /><rect x="18" y="35" width="14" height="5" fill="#ff4b82" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">SSS</text></g></g>
+
+          <!-- Title -->
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Ancient One</text>
+          
+          <!-- Progress -->
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="251.99999999999997" height="4" rx="2" fill="#ff4b82"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            14 pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(825, 15)">
         <g class="fade-up" style="animation-delay: 360ms">
           <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
           
-            <rect width="110" height="150" rx="0" fill="#161b22" stroke="#444c56" stroke-width="2"/>
-          
-          
-          <!-- Category Label -->
-          <text x="55" y="20" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#cd7f32" style="letter-spacing: 1px">ISSUES</text>
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#a0a0a0" style="text-transform: uppercase;">Gists</text>
 
           <!-- Trophy -->
-          <g transform="translate(55, 65)">
-             
-        <g transform="translate(-25, -25)">
-          <rect x="15" y="10" width="20" height="15" fill="#cd7f32" />
-          <rect x="10" y="10" width="5" height="10" fill="#cd7f32" />
-          <rect x="35" y="10" width="5" height="10" fill="#cd7f32" />
-          <rect x="22" y="25" width="6" height="10" fill="#cd7f32" />
-          <rect x="18" y="35" width="14" height="5" fill="#cd7f32" />
-          <text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">
-            B
-          </text>
-        </g>
-      
-          </g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#a0a0a0" /><rect x="10" y="10" width="5" height="10" fill="#a0a0a0" /><rect x="35" y="10" width="5" height="10" fill="#a0a0a0" /><rect x="22" y="25" width="6" height="10" fill="#a0a0a0" /><rect x="18" y="35" width="14" height="5" fill="#a0a0a0" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">A</text></g></g>
 
           <!-- Title -->
-          <text x="55" y="112" text-anchor="middle" font-family="Courier New, monospace" font-weight="600" font-size="8" fill="#c9d1d9">First Issue</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Script Kid</text>
           
           <!-- Progress -->
-          <rect x="16" y="132" width="6" height="6" fill="#cd7f32" /><rect x="24" y="132" width="6" height="6" fill="#cd7f32" /><rect x="32" y="132" width="6" height="6" fill="#cd7f32" /><rect x="40" y="132" width="6" height="6" fill="#cd7f32" /><rect x="48" y="132" width="6" height="6" fill="#cd7f32" /><rect x="56" y="132" width="6" height="6" fill="#333" /><rect x="64" y="132" width="6" height="6" fill="#333" /><rect x="72" y="132" width="6" height="6" fill="#333" /><rect x="80" y="132" width="6" height="6" fill="#333" /><rect x="88" y="132" width="6" height="6" fill="#333" />
-          <text x="55" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#8b949e" font-weight="700">
-            5pt
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="36" height="4" rx="2" fill="#a0a0a0"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            8 pt
           </text>
         </g>
       </g>
     
-      <g transform="translate(500, 12)">
+      <g transform="translate(15, 190)">
+        <g class="fade-up" style="animation-delay: 420ms">
+          <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
+          
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#ffb300" style="text-transform: uppercase;">Commits</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#ffb300" /><rect x="10" y="10" width="5" height="10" fill="#ffb300" /><rect x="35" y="10" width="5" height="10" fill="#ffb300" /><rect x="22" y="25" width="6" height="10" fill="#ffb300" /><rect x="18" y="35" width="14" height="5" fill="#ffb300" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">S</text></g></g>
+
+          <!-- Title -->
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Commits No Cap</text>
+          
+          <!-- Progress -->
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="52.218" height="4" rx="2" fill="#ffb300"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            2901 pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(150, 190)">
         <g class="fade-up" style="animation-delay: 480ms">
           <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
           
-            <rect width="110" height="150" rx="0" fill="#161b22" stroke="#444c56" stroke-width="2"/>
-          
-          
-          <!-- Category Label -->
-          <text x="55" y="20" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#cd7f32" style="letter-spacing: 1px">PR</text>
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Reviews</text>
 
           <!-- Trophy -->
-          <g transform="translate(55, 65)">
-             
-        <g transform="translate(-25, -25)">
-          <rect x="15" y="10" width="20" height="15" fill="#cd7f32" />
-          <rect x="10" y="10" width="5" height="10" fill="#cd7f32" />
-          <rect x="35" y="10" width="5" height="10" fill="#cd7f32" />
-          <rect x="22" y="25" width="6" height="10" fill="#cd7f32" />
-          <rect x="18" y="35" width="14" height="5" fill="#cd7f32" />
-          <text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">
-            B
-          </text>
-        </g>
-      
-          </g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#cd7f32" /><rect x="10" y="10" width="5" height="10" fill="#cd7f32" /><rect x="35" y="10" width="5" height="10" fill="#cd7f32" /><rect x="22" y="25" width="6" height="10" fill="#cd7f32" /><rect x="18" y="35" width="14" height="5" fill="#cd7f32" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">B</text></g></g>
 
           <!-- Title -->
-          <text x="55" y="112" text-anchor="middle" font-family="Courier New, monospace" font-weight="600" font-size="8" fill="#c9d1d9">First PR</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Lurker</text>
           
           <!-- Progress -->
-          <rect x="16" y="132" width="6" height="6" fill="#cd7f32" /><rect x="24" y="132" width="6" height="6" fill="#cd7f32" /><rect x="32" y="132" width="6" height="6" fill="#cd7f32" /><rect x="40" y="132" width="6" height="6" fill="#cd7f32" /><rect x="48" y="132" width="6" height="6" fill="#cd7f32" /><rect x="56" y="132" width="6" height="6" fill="#cd7f32" /><rect x="64" y="132" width="6" height="6" fill="#cd7f32" /><rect x="72" y="132" width="6" height="6" fill="#cd7f32" /><rect x="80" y="132" width="6" height="6" fill="#333" /><rect x="88" y="132" width="6" height="6" fill="#333" />
-          <text x="55" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#8b949e" font-weight="700">
-            8pt
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="18" height="4" rx="2" fill="#cd7f32"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            2 pt
           </text>
         </g>
       </g>
     
-      <g transform="translate(622, 12)">
+      <g transform="translate(285, 190)">
+        <g class="fade-up" style="animation-delay: 540ms">
+          <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
+          
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Languages</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#cd7f32" /><rect x="10" y="10" width="5" height="10" fill="#cd7f32" /><rect x="35" y="10" width="5" height="10" fill="#cd7f32" /><rect x="22" y="25" width="6" height="10" fill="#cd7f32" /><rect x="18" y="35" width="14" height="5" fill="#cd7f32" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">B</text></g></g>
+
+          <!-- Title -->
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Mono-brain</text>
+          
+          <!-- Progress -->
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="54" height="4" rx="2" fill="#cd7f32"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            3 pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(420, 190)">
         <g class="fade-up" style="animation-delay: 600ms">
           <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
           
-            <rect width="110" height="150" rx="0" fill="#161b22" stroke="#444c56" stroke-width="2"/>
-          
-          
-          <!-- Category Label -->
-          <text x="55" y="20" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#ff4b82" style="letter-spacing: 1px">YEARS</text>
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#30363d" style="text-transform: uppercase;">Discussions</text>
 
           <!-- Trophy -->
-          <g transform="translate(55, 65)">
-             
-        <g transform="translate(-25, -25)">
-          <rect x="15" y="10" width="20" height="15" fill="#ff4b82" />
-          <rect x="10" y="10" width="5" height="10" fill="#ff4b82" />
-          <rect x="35" y="10" width="5" height="10" fill="#ff4b82" />
-          <rect x="22" y="25" width="6" height="10" fill="#ff4b82" />
-          <rect x="18" y="35" width="14" height="5" fill="#ff4b82" />
-          <text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">
-            SSS
-          </text>
-        </g>
-      
-          </g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#30363d" /><rect x="10" y="10" width="5" height="10" fill="#30363d" /><rect x="35" y="10" width="5" height="10" fill="#30363d" /><rect x="22" y="25" width="6" height="10" fill="#30363d" /><rect x="18" y="35" width="14" height="5" fill="#30363d" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">C</text></g></g>
 
           <!-- Title -->
-          <text x="55" y="112" text-anchor="middle" font-family="Courier New, monospace" font-weight="600" font-size="8" fill="#c9d1d9">OG Developer</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Locked</text>
           
           <!-- Progress -->
-          <rect x="16" y="132" width="6" height="6" fill="#ff4b82" /><rect x="24" y="132" width="6" height="6" fill="#ff4b82" /><rect x="32" y="132" width="6" height="6" fill="#ff4b82" /><rect x="40" y="132" width="6" height="6" fill="#ff4b82" /><rect x="48" y="132" width="6" height="6" fill="#ff4b82" /><rect x="56" y="132" width="6" height="6" fill="#ff4b82" /><rect x="64" y="132" width="6" height="6" fill="#ff4b82" /><rect x="72" y="132" width="6" height="6" fill="#ff4b82" /><rect x="80" y="132" width="6" height="6" fill="#ff4b82" /><rect x="88" y="132" width="6" height="6" fill="#ff4b82" />
-          <text x="55" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#8b949e" font-weight="700">
-            14pt
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="0" height="4" rx="2" fill="#30363d"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            0 pt
           </text>
         </g>
       </g>
     
-      <g transform="translate(12, 174)">
+      <g transform="translate(555, 190)">
+        <g class="fade-up" style="animation-delay: 660ms">
+          <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
+          
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#ff4b82" style="text-transform: uppercase;">Forks</text>
+
+          <!-- Trophy -->
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#ff4b82" /><rect x="10" y="10" width="5" height="10" fill="#ff4b82" /><rect x="35" y="10" width="5" height="10" fill="#ff4b82" /><rect x="22" y="25" width="6" height="10" fill="#ff4b82" /><rect x="18" y="35" width="14" height="5" fill="#ff4b82" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">SSS</text></g></g>
+
+          <!-- Title -->
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">The Blueprint</text>
+          
+          <!-- Progress -->
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="73459.35" height="4" rx="2" fill="#ff4b82"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            163243 pt
+          </text>
+        </g>
+      </g>
+    
+      <g transform="translate(690, 190)">
         <g class="fade-up" style="animation-delay: 720ms">
           <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
           
-            <rect width="110" height="150" rx="0" fill="#161b22" stroke="#444c56" stroke-width="2"/>
-          
-          
-          <!-- Category Label -->
-          <text x="55" y="20" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#a0a0a0" style="letter-spacing: 1px">GISTS</text>
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#a0a0a0" style="text-transform: uppercase;">Sponsors</text>
 
           <!-- Trophy -->
-          <g transform="translate(55, 65)">
-             
-        <g transform="translate(-25, -25)">
-          <rect x="15" y="10" width="20" height="15" fill="#a0a0a0" />
-          <rect x="10" y="10" width="5" height="10" fill="#a0a0a0" />
-          <rect x="35" y="10" width="5" height="10" fill="#a0a0a0" />
-          <rect x="22" y="25" width="6" height="10" fill="#a0a0a0" />
-          <rect x="18" y="35" width="14" height="5" fill="#a0a0a0" />
-          <text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">
-            A
-          </text>
-        </g>
-      
-          </g>
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#a0a0a0" /><rect x="10" y="10" width="5" height="10" fill="#a0a0a0" /><rect x="35" y="10" width="5" height="10" fill="#a0a0a0" /><rect x="22" y="25" width="6" height="10" fill="#a0a0a0" /><rect x="18" y="35" width="14" height="5" fill="#a0a0a0" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">A</text></g></g>
 
           <!-- Title -->
-          <text x="55" y="112" text-anchor="middle" font-family="Courier New, monospace" font-weight="600" font-size="8" fill="#c9d1d9">Gist Maker</text>
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Patron</text>
           
           <!-- Progress -->
-          <rect x="16" y="132" width="6" height="6" fill="#a0a0a0" /><rect x="24" y="132" width="6" height="6" fill="#a0a0a0" /><rect x="32" y="132" width="6" height="6" fill="#a0a0a0" /><rect x="40" y="132" width="6" height="6" fill="#a0a0a0" /><rect x="48" y="132" width="6" height="6" fill="#333" /><rect x="56" y="132" width="6" height="6" fill="#333" /><rect x="64" y="132" width="6" height="6" fill="#333" /><rect x="72" y="132" width="6" height="6" fill="#333" /><rect x="80" y="132" width="6" height="6" fill="#333" /><rect x="88" y="132" width="6" height="6" fill="#333" />
-          <text x="55" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#8b949e" font-weight="700">
-            8pt
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="81" height="4" rx="2" fill="#a0a0a0"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            9 pt
           </text>
         </g>
       </g>
     
+      <g transform="translate(825, 190)">
+        <g class="fade-up" style="animation-delay: 780ms">
+          <!-- Card Body -->
+          <rect width="120" height="160" fill="#161b22" stroke="#444c56" stroke-width="1" rx="0" />
+          
+          <!-- Category -->
+          <text x="60" y="22" text-anchor="middle" font-family="Courier New, monospace" font-weight="800" font-size="10" fill="#cd7f32" style="text-transform: uppercase;">Explorer</text>
 
-      <rect width="100%" height="100%" fill="url(#scanlines)" pointer-events="none" />
+          <!-- Trophy -->
+          <g transform="translate(60, 70)"><g transform="translate(-25, -25)"><rect x="15" y="10" width="20" height="15" fill="#cd7f32" /><rect x="10" y="10" width="5" height="10" fill="#cd7f32" /><rect x="35" y="10" width="5" height="10" fill="#cd7f32" /><rect x="22" y="25" width="6" height="10" fill="#cd7f32" /><rect x="18" y="35" width="14" height="5" fill="#cd7f32" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="#000">B</text></g></g>
+
+          <!-- Title -->
+          <text x="60" y="122" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="9" fill="#c9d1d9">Lurker</text>
+          
+          <!-- Progress -->
+          <rect x="15" y="138" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/><rect x="15" y="138" width="50.400000000000006" height="4" rx="2" fill="#cd7f32"/>
+          <text x="60" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#8b949e" font-weight="700">
+            56 pt
+          </text>
+        </g>
+      </g>
+    
+      <pattern id="scanlines" width="100%" height="2" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="100%" y2="0" stroke="black" stroke-width="0.5" opacity="0.2" /></pattern><rect width="100%" height="100%" fill="url(#scanlines)" pointer-events="none" />
     </svg>

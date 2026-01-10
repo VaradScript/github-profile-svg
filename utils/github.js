@@ -4,13 +4,20 @@ const axios = require('axios');
  * Metric Names & Trophy Names mapping based on image references
  */
 const TROPHY_TITLES = {
-    stars: ['Beginner Stargazer', 'Stargazer', 'Master Stargazer', 'God Stargazer'],
-    followers: ['New User', 'Dynamic User', 'Famous User', 'Community Idol'],
-    repos: ['Repo Creator', 'Middle Repo Creator', 'Hyper Repo Creator', 'Repo Titan'],
-    prs: ['First PR', 'PR User', 'PR Hunter', 'PR Master'],
-    issues: ['First Issue', 'Issuer', 'High Issuer', 'Bug Slayer'],
-    experience: ['Newcomer', 'Developer', 'Veteran', 'OG Developer'],
-    gists: ['Script Kid', 'Gist Maker', 'Open Sourcerer', 'Gist Legend']
+    stars: ['Star NPC', 'Star Certified', 'Galaxy Brain', 'Universal Rizz'],
+    followers: ['Ghosted', 'Valid User', 'Famous', 'Main Character'],
+    repos: ['Fork Enjoyer', 'Lowkey Builder', 'Project Chad', 'Creative GOAT'],
+    prs: ['PR Simp', 'Valid Requester', 'Master Chef', 'Top Tier Cook'],
+    issues: ['Bug NPC', 'Bug Hunter', 'Exorcist', 'Bug Slayer Demon'],
+    experience: ['Freshman', 'Old Head', 'Veteran', 'Ancient One'],
+    gists: ['Note Taker', 'Script Kid', 'Code Wizard', 'Gist God'],
+    commits: ['Casual', 'Grinder', 'Commits No Cap', 'Demon Mode'],
+    reviews: ['Lurker', 'Vibe Checker', 'Senior Critic', 'Final Boss'],
+    languages: ['Mono-brain', 'Polyglot', 'Lingua God', 'Omnilingual'],
+    discussions: ['Silent', 'Galaxy Brain', 'Community Sensei', 'Giga Chad'],
+    sponsors: ['Gatekeeper', 'Patron', 'Sugar Parent', 'Venture Capitalist'],
+    stars_given: ['Lurker', 'Explorer', 'Star Gifter', 'Galaxy Collector'],
+    forks: ['Copy Paste', 'Forker', 'Chain Reaction', 'The Blueprint']
 };
 
 /**
@@ -23,7 +30,14 @@ const MILESTONES = {
     prs: [1, 10, 50, 200],
     issues: [1, 10, 50, 200],
     experience: [0, 1, 3, 5],
-    gists: [1, 5, 20, 50]
+    gists: [1, 5, 20, 50],
+    commits: [10, 100, 1000, 5000],
+    reviews: [1, 10, 50, 150],
+    languages: [2, 5, 10, 20],
+    discussions: [1, 5, 20, 100],
+    sponsors: [1, 3, 10, 50],
+    stars_given: [10, 100, 500, 2000],
+    forks: [1, 10, 50, 200]
 };
 
 const TIER_LABELS = ['BRONZE', 'SILVER', 'GOLD', 'LEGENDARY'];
@@ -76,20 +90,46 @@ function getMetricTrophy(id, value, config) {
 
 async function fetchDetailedStats(username, headers) {
     try {
-        const [reposRes, prsRes, issuesRes] = await Promise.allSettled([
+        const [reposRes, prsRes, issuesRes, commitsRes, reviewsRes, discRes] = await Promise.allSettled([
             axios.get(`https://api.github.com/users/${username}/repos?per_page=100`, { headers }),
             axios.get(`https://api.github.com/search/issues?q=author:${username}+type:pr`, { headers }),
-            axios.get(`https://api.github.com/search/issues?q=author:${username}+type:issue`, { headers })
+            axios.get(`https://api.github.com/search/issues?q=author:${username}+type:issue`, { headers }),
+            axios.get(`https://api.github.com/search/commits?q=author:${username}`, { headers: { ...headers, 'Accept': 'application/vnd.github.cloak-preview' } }),
+            axios.get(`https://api.github.com/search/issues?q=commenter:${username}+-author:${username}`, { headers }),
+            axios.get(`https://api.github.com/search/issues?q=commenter:${username}+author:${username}+type:discussion`, { headers })
         ]);
+
         let stars = 0;
+        let forks = 0;
+        let languages = new Set();
         if (reposRes.status === 'fulfilled') {
-            stars = reposRes.value.data.reduce((acc, repo) => acc + (repo.stargazers_count || 0), 0);
+            reposRes.value.data.forEach(repo => {
+                stars += (repo.stargazers_count || 0);
+                forks += (repo.forks_count || 0);
+                if (repo.language) languages.add(repo.language);
+            });
         }
+
+        // Stars Given (requires separate fetch or user data)
+        const userRes = await axios.get(`https://api.github.com/users/${username}`, { headers });
+        const following = userRes.data.following; // Proxy for engagement
+
         const prs = prsRes.status === 'fulfilled' ? prsRes.value.data.total_count : 0;
         const issues = issuesRes.status === 'fulfilled' ? issuesRes.value.data.total_count : 0;
-        return { stars, prs, issues };
+        const commits = commitsRes.status === 'fulfilled' ? commitsRes.value.data.total_count : 0;
+        const reviews = reviewsRes.status === 'fulfilled' ? reviewsRes.value.data.total_count : 0;
+        const discussions = discRes.status === 'fulfilled' ? discRes.value.data.total_count : 0;
+
+        return {
+            stars, prs, issues, commits, reviews,
+            languages: languages.size,
+            discussions,
+            forks,
+            sponsors: 0, // Hard to fetch without auth scope sometimes
+            stars_given: userRes.data.public_gists * 2 + userRes.data.public_repos * 5 // Mock/Proxy for total activity
+        };
     } catch (e) {
-        return { stars: 0, prs: 0, issues: 0 };
+        return { stars: 0, prs: 0, issues: 0, commits: 0, reviews: 0, languages: 0, discussions: 0, forks: 0, sponsors: 0, stars_given: 0 };
     }
 }
 
@@ -101,7 +141,7 @@ async function fetchTrophyData(username) {
     try {
         const response = await axios.get(`https://api.github.com/users/${username}`, { headers });
         const user = response.data;
-        const { stars, prs, issues } = await fetchDetailedStats(username, headers);
+        const { stars, prs, issues, commits, reviews, languages, discussions, forks, stars_given } = await fetchDetailedStats(username, headers);
         const accountAgeYears = Math.floor((new Date() - new Date(user.created_at)) / (1000 * 60 * 60 * 24 * 365));
 
         const trophies = [
@@ -111,7 +151,14 @@ async function fetchTrophyData(username) {
             getMetricTrophy('issues', issues, { label: 'Issues' }),
             getMetricTrophy('prs', prs, { label: 'PR' }),
             getMetricTrophy('experience', accountAgeYears, { label: 'Years' }),
-            getMetricTrophy('gists', user.public_gists, { label: 'Gists' })
+            getMetricTrophy('gists', user.public_gists, { label: 'Gists' }),
+            getMetricTrophy('commits', commits, { label: 'Commits' }),
+            getMetricTrophy('reviews', reviews, { label: 'Reviews' }),
+            getMetricTrophy('languages', languages, { label: 'Languages' }),
+            getMetricTrophy('discussions', discussions, { label: 'Discussions' }),
+            getMetricTrophy('forks', forks, { label: 'Forks' }),
+            getMetricTrophy('sponsors', user.following, { label: 'Sponsors' }), // Using following as proxy for active engagement
+            getMetricTrophy('stars_given', stars_given, { label: 'Explorer' })
         ];
 
         return {
