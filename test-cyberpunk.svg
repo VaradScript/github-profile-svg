@@ -1,7 +1,7 @@
 <svg width="960" height="365" viewBox="0 0 960 365" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <style>
-          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;800&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Inter:wght@400;800&amp;display=swap');
           .fade-up { opacity: 0; animation: fadeUpAnim 0.6s ease-out forwards; }
           @keyframes fadeUpAnim { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
           .glitch-line { animation: glitch 2s infinite; }
@@ -10,7 +10,7 @@
         <filter id="cardShadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/></filter>
         <filter id="blurFilter"><feGaussianBlur in="SourceGraphic" stdDeviation="4" /></filter>
         <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" /><stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" /></linearGradient>
-        <pattern id="scanlines" width="10" height="2" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" stroke="black" stroke-width="0.7" opacity="0.35" /></pattern>
+        <pattern id="scanlines" width="10" height="3" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" stroke="black" stroke-width="1.0" opacity="0.5" /></pattern>
         <filter id="glow-LEGENDARY" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-GOLD" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-SILVER" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-BRONZE" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="glow-LOCKED" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter>
         
           <radialGradient id="grad-LEGENDARY-stars" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:#f1e05a;stop-opacity:1" /></radialGradient>
