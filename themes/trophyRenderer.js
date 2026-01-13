@@ -172,6 +172,7 @@ function renderTrophySVG(data, options = {}) {
         <filter id="cardShadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/></filter>
         <filter id="blurFilter"><feGaussianBlur in="SourceGraphic" stdDeviation="4" /></filter>
         <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" /><stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" /></linearGradient>
+        ${(mode === 'nostalgic' || mode === 'cyberpunk') ? `<pattern id="scanlines" width="10" height="2" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="10" y2="0" stroke="black" stroke-width="0.7" opacity="${mode === 'cyberpunk' ? (isDark ? 0.35 : 0.15) : (isDark ? 0.2 : 0.05)}" /></pattern>` : ''}
         ${Object.entries(TIER_CONFIG).map(([tier, cfg]) => `<filter id="glow-${tier}" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter>`).join('')}
         ${Object.entries(DOMAIN_COLORS).map(([id, color]) => `
           <radialGradient id="grad-LEGENDARY-${id}" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.4" /><stop offset="100%" style="stop-color:${color};stop-opacity:1" /></radialGradient>
@@ -183,7 +184,7 @@ function renderTrophySVG(data, options = {}) {
       </defs>
       <rect width="100%" height="100%" fill="none"/>
       ${content}
-      ${(mode === 'nostalgic' || mode === 'cyberpunk') ? `<pattern id="scanlines" width="100%" height="2" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="100%" y2="0" stroke="black" stroke-width="0.5" opacity="${mode === 'cyberpunk' ? (isDark ? 0.3 : 0.1) : (isDark ? 0.2 : 0.05)}" /></pattern><rect width="100%" height="100%" fill="url(#scanlines)" pointer-events="none" />` : ''}
+      ${(mode === 'nostalgic' || mode === 'cyberpunk') ? `<rect width="100%" height="100%" fill="url(#scanlines)" pointer-events="none" />` : ''}
     </svg>
   `.trim();
 }
