@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
         animation = 'on',
         showLocked = 'false',
         showHidden = 'false',
-        mode = '2d' // Default mode
+        mode = 'unreal' // Default mode
     } = req.query;
 
     res.setHeader('Content-Type', 'image/svg+xml');

@@ -1,7 +1,7 @@
 <svg width="960" height="365" viewBox="0 0 960 365" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Inter:wght@400;800&amp;display=swap" rel="stylesheet" />
         <style>
+          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;800&display=swap');
           .fade-up { opacity: 0; animation: fadeUpAnim 0.6s ease-out forwards; }
           @keyframes fadeUpAnim { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
           .glitch-line { animation: glitch 2s infinite; }
@@ -122,7 +122,7 @@
       </g>
     
       <g transform="translate(150, 15)">
-        <g class="fade-up" style="animation-delay: 60ms">
+        <g class="fade-up" style="animation-delay: 30ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#58a6ff" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#58a6ff" />
           
@@ -144,7 +144,7 @@
       </g>
     
       <g transform="translate(285, 15)">
-        <g class="fade-up" style="animation-delay: 120ms">
+        <g class="fade-up" style="animation-delay: 60ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ff7b72" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ff7b72" />
           
@@ -166,7 +166,7 @@
       </g>
     
       <g transform="translate(420, 15)">
-        <g class="fade-up" style="animation-delay: 180ms">
+        <g class="fade-up" style="animation-delay: 90ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ffa657" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ffa657" />
           
@@ -188,7 +188,7 @@
       </g>
     
       <g transform="translate(555, 15)">
-        <g class="fade-up" style="animation-delay: 240ms">
+        <g class="fade-up" style="animation-delay: 120ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#a5d6ff" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#a5d6ff" />
           
@@ -210,7 +210,7 @@
       </g>
     
       <g transform="translate(690, 15)">
-        <g class="fade-up" style="animation-delay: 300ms">
+        <g class="fade-up" style="animation-delay: 150ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#7ee787" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#7ee787" />
           
@@ -232,7 +232,7 @@
       </g>
     
       <g transform="translate(825, 15)">
-        <g class="fade-up" style="animation-delay: 360ms">
+        <g class="fade-up" style="animation-delay: 180ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#d299ff" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#d299ff" />
           
@@ -254,7 +254,7 @@
       </g>
     
       <g transform="translate(15, 190)">
-        <g class="fade-up" style="animation-delay: 420ms">
+        <g class="fade-up" style="animation-delay: 210ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ff69b4" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ff69b4" />
           
@@ -276,7 +276,7 @@
       </g>
     
       <g transform="translate(150, 190)">
-        <g class="fade-up" style="animation-delay: 480ms">
+        <g class="fade-up" style="animation-delay: 240ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#3fb950" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#3fb950" />
           
@@ -298,7 +298,7 @@
       </g>
     
       <g transform="translate(285, 190)">
-        <g class="fade-up" style="animation-delay: 540ms">
+        <g class="fade-up" style="animation-delay: 270ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#bc8cff" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#bc8cff" />
           
@@ -320,7 +320,7 @@
       </g>
     
       <g transform="translate(420, 190)">
-        <g class="fade-up" style="animation-delay: 600ms">
+        <g class="fade-up" style="animation-delay: 300ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#333" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#333" />
           
@@ -342,7 +342,7 @@
       </g>
     
       <g transform="translate(555, 190)">
-        <g class="fade-up" style="animation-delay: 660ms">
+        <g class="fade-up" style="animation-delay: 330ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#d1d5da" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#d1d5da" />
           
@@ -364,7 +364,7 @@
       </g>
     
       <g transform="translate(690, 190)">
-        <g class="fade-up" style="animation-delay: 720ms">
+        <g class="fade-up" style="animation-delay: 360ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#ea4aaa" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#ea4aaa" />
           
@@ -386,7 +386,7 @@
       </g>
     
       <g transform="translate(825, 190)">
-        <g class="fade-up" style="animation-delay: 780ms">
+        <g class="fade-up" style="animation-delay: 390ms">
           <!-- Card Body -->
           <path d="M0,0 L110,0 L120,10 L120,160 L10,160 L0,150 Z" fill="#161b22" stroke="#f9826c" stroke-width="1" /><rect x="5" y="5" width="10" height="2" fill="#f9826c" />
           

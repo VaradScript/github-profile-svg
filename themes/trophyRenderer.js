@@ -9,9 +9,10 @@ function renderTrophySVG(data, options = {}) {
     animation = 'on',
     showLocked = 'false',
     showHidden = 'false',
-    mode = 'unreal'
+    mode: rawMode = 'unreal'
   } = options;
 
+  const mode = rawMode === 'cyber' ? 'cyberpunk' : rawMode;
   const isDark = theme !== 'light';
 
   // Theme Variables
@@ -80,8 +81,16 @@ function renderTrophySVG(data, options = {}) {
       return `<g transform="translate(-30, -30)" ${styleAttr}><circle cx="30" cy="30" r="25" fill="#e2b13c" stroke="#8b4513" stroke-width="2" /><path d="M15 15 Q30 5 45 15 L30 50 Z" fill="#d4af37" /><text x="30" y="38" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="24" fill="#5d2e0a">${isSecret ? '?' : rank}</text></g>`;
     }
 
-    const filterEffect = (mode === 'unreal' && !isSecret) ? `filter="url(#glow-${tier})"` : '';
-    return `<g transform="translate(-30, -30) scale(0.85)" ${filterEffect} ${styleAttr}><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="${domainColor}" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="${domainColor}" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="${domainColor}" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="${isDark ? '#000' : '#fff'}">${isSecret ? '?' : rank}</text></g>`;
+    let filters = [];
+    if (isSecret) {
+      filters.push('url(#blurFilter)');
+    } else if (mode === 'unreal') {
+      filters.push(`url(#glow-${tier})`);
+    }
+
+    const filterAttr = filters.length > 0 ? `filter="${filters.join(' ')}"` : '';
+
+    return `<g transform="translate(-30, -30) scale(0.85)" ${filterAttr}><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="${domainColor}" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="${domainColor}" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="${domainColor}" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="${isDark ? '#000' : '#fff'}">${isSecret ? '?' : rank}</text></g>`;
   };
 
   let content = '';
@@ -154,8 +163,8 @@ function renderTrophySVG(data, options = {}) {
   return `
     <svg width="${totalW}" height="${totalH}" viewBox="0 0 ${totalW} ${totalH}" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Inter:wght@400;800&amp;display=swap" rel="stylesheet" />
         <style>
+          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;800&display=swap');
           .fade-up { opacity: 0; animation: fadeUpAnim 0.6s ease-out forwards; }
           @keyframes fadeUpAnim { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
           .glitch-line { animation: glitch 2s infinite; }

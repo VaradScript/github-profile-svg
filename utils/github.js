@@ -99,30 +99,53 @@ function getMetricTrophy(id, value, options = {}) {
 
 async function fetchDetailedStats(username, headers) {
     try {
-        const [reposRes, prsRes, issuesRes, commitsRes, reviewsRes, discRes] = await Promise.allSettled([
+        const [reposRes, prsRes, issuesRes, commitsRes, reviewsRes, discRes, starredRes] = await Promise.allSettled([
             axios.get(`https://api.github.com/users/${username}/repos?per_page=100`, { headers }),
             axios.get(`https://api.github.com/search/issues?q=author:${username}+type:pr`, { headers }),
             axios.get(`https://api.github.com/search/issues?q=author:${username}+type:issue`, { headers }),
             axios.get(`https://api.github.com/search/commits?q=author:${username}`, { headers: { ...headers, 'Accept': 'application/vnd.github.cloak-preview' } }),
             axios.get(`https://api.github.com/search/issues?q=commenter:${username}+-author:${username}`, { headers }),
-            axios.get(`https://api.github.com/search/issues?q=commenter:${username}+author:${username}+type:discussion`, { headers })
+            axios.get(`https://api.github.com/search/issues?q=commenter:${username}+author:${username}+type:discussion`, { headers }),
+            axios.get(`https://api.github.com/users/${username}/starred?per_page=1`, { headers })
         ]);
 
         let stars = 0;
         let forks = 0;
         let languages = new Set();
-        if (reposRes.status === 'fulfilled') {
-            reposRes.value.data.forEach(repo => {
+
+        const processRepos = (repos) => {
+            repos.forEach(repo => {
                 stars += (repo.stargazers_count || 0);
                 forks += (repo.forks_count || 0);
                 if (repo.language) languages.add(repo.language);
             });
+        };
+
+        if (reposRes.status === 'fulfilled') {
+            processRepos(reposRes.value.data);
+            // If user has more than 100 repos, fetch another page to be more accurate
+            if (reposRes.value.data.length === 100) {
+                try {
+                    const reposRes2 = await axios.get(`https://api.github.com/users/${username}/repos?per_page=100&page=2`, { headers });
+                    processRepos(reposRes2.data);
+                } catch (e) { /* ignore page 2 errors */ }
+            }
         }
 
-        // Stars Given (requires separate fetch or user data)
-        const userRes = await axios.get(`https://api.github.com/users/${username}`, { headers });
-        const following = userRes.data.following; // Proxy for engagement
+        // Stars Given (Real count from Link header)
+        let stars_given = 0;
+        if (starredRes.status === 'fulfilled') {
+            const link = starredRes.value.headers.link;
+            if (link) {
+                const match = link.match(/&page=(\d+)>; rel="last"/);
+                if (match) stars_given = parseInt(match[1]);
+                else stars_given = starredRes.value.data.length;
+            } else {
+                stars_given = starredRes.value.data.length;
+            }
+        }
 
+        const userRes = await axios.get(`https://api.github.com/users/${username}`, { headers });
         const prs = prsRes.status === 'fulfilled' ? prsRes.value.data.total_count : 0;
         const issues = issuesRes.status === 'fulfilled' ? issuesRes.value.data.total_count : 0;
         const commits = commitsRes.status === 'fulfilled' ? commitsRes.value.data.total_count : 0;
@@ -134,8 +157,8 @@ async function fetchDetailedStats(username, headers) {
             languages: languages.size,
             discussions,
             forks,
-            sponsors: 0, // Hard to fetch without auth scope sometimes
-            stars_given: userRes.data.public_gists * 2 + userRes.data.public_repos * 5 // Mock/Proxy for total activity
+            sponsors: 0,
+            stars_given
         };
     } catch (e) {
         return { stars: 0, prs: 0, issues: 0, commits: 0, reviews: 0, languages: 0, discussions: 0, forks: 0, sponsors: 0, stars_given: 0 };

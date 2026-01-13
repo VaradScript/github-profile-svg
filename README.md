@@ -103,7 +103,7 @@ Copy this into your `README.md`:
 | Parameter | Default | Options |
 |-----------|---------|---------|
 | `username` | (Required) | Your GitHub Username |
-| `mode` | `unreal` | `glass`, `terminal`, `minecraft`, `cyberpunk`, `traditional`, `nostalgic`, `sketch`, `2d` |
+| `mode` | `unreal` | `glass`, `terminal`, `unreal`, `cyberpunk`, `cyber`, `minecraft`, `traditional`, `nostalgic`, `sketch`, `2d` |
 | `theme` | `dark` | `dark`, `light` |
 | `showLocked` | `false` | Set `true` to show all 14 trophy slots |
 | `showHidden` | `false` | Set `true` to show blurred rare trophies |
