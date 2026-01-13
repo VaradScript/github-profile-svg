@@ -57,38 +57,37 @@ function renderTrophySVG(data, options = {}) {
 
   const getTrophyCup = (color, rank, mode, tier, domain, isSecret) => {
     const domainColor = DOMAIN_COLORS[domain] || color;
-    const styleAttr = isSecret ? `filter="url(#blurFilter)"` : '';
+
+    // Determine filter attribute
+    let filterVal = '';
+    if (isSecret) {
+      filterVal = 'url(#blurFilter)';
+    } else if (mode === 'unreal') {
+      filterVal = `url(#glow-${tier})`;
+    }
+    const filterAttr = filterVal ? `filter="${filterVal}"` : '';
 
     if (mode === 'terminal') {
-      return `<g transform="translate(-25, -25)" ${styleAttr}><text x="25" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="${domainColor}">[${isSecret ? '?' : rank}]</text><text x="25" y="45" text-anchor="middle" font-family="monospace" font-size="8" fill="${domainColor}">#_${isSecret ? 'SECRET' : 'TROPHY'}</text></g>`;
+      return `<g transform="translate(-25, -25)" ${filterAttr}><text x="25" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="${domainColor}">[${isSecret ? '?' : rank}]</text><text x="25" y="45" text-anchor="middle" font-family="monospace" font-size="8" fill="${domainColor}">#_${isSecret ? 'SECRET' : 'TROPHY'}</text></g>`;
     }
     if (mode === 'minecraft') {
-      return `<g transform="translate(-25, -25)" ${styleAttr}><rect x="15" y="10" width="20" height="20" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">${isSecret ? '?' : rank}</text></g>`;
+      return `<g transform="translate(-25, -25)" ${filterAttr}><rect x="15" y="10" width="20" height="20" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><rect x="10" y="15" width="5" height="10" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><rect x="35" y="15" width="5" height="10" fill="${isSecret ? '#333' : color}" stroke="#000" stroke-width="2"/><text x="25" y="25" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-weight="900" font-size="14" fill="#000">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'sketch') {
-      return `<g transform="translate(-30, -30)" ${styleAttr}><path d="M10 20 C 15 10, 45 10, 50 20 Q 55 40, 30 60 Q 5 40, 10 20" fill="none" stroke="${domainColor}" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"/><text x="30" y="35" text-anchor="middle" font-family="cursive" font-size="20" fill="${domainColor}">${isSecret ? '?' : rank}</text></g>`;
+      return `<g transform="translate(-30, -30)" ${filterAttr}><path d="M10 20 C 15 10, 45 10, 50 20 Q 55 40, 30 60 Q 5 40, 10 20" fill="none" stroke="${domainColor}" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"/><text x="30" y="35" text-anchor="middle" font-family="cursive" font-size="20" fill="${domainColor}">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'glass') {
-      return `<g transform="translate(-30, -30)" ${styleAttr}><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px ${domainColor})">${isSecret ? '?' : rank}</text></g>`;
+      return `<g transform="translate(-30, -30)" ${filterAttr}><circle cx="30" cy="30" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><text x="30" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" style="filter: drop-shadow(0 0 8px ${domainColor})">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'nostalgic') {
-      return `<g transform="translate(-25, -25)" ${styleAttr}><rect x="15" y="10" width="20" height="15" fill="${color}" /><rect x="10" y="10" width="5" height="10" fill="${color}" /><rect x="35" y="10" width="5" height="10" fill="${color}" /><rect x="22" y="25" width="6" height="10" fill="${color}" /><rect x="18" y="35" width="14" height="5" fill="${color}" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="${isDark ? '#000' : '#fff'}">${isSecret ? '?' : rank}</text></g>`;
+      return `<g transform="translate(-25, -25)" ${filterAttr}><rect x="15" y="10" width="20" height="15" fill="${color}" /><rect x="10" y="10" width="5" height="10" fill="${color}" /><rect x="35" y="10" width="5" height="10" fill="${color}" /><rect x="22" y="25" width="6" height="10" fill="${color}" /><rect x="18" y="35" width="14" height="5" fill="${color}" /><text x="25" y="22" text-anchor="middle" font-family="monospace" font-weight="900" font-size="12" fill="${isDark ? '#000' : '#fff'}">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'cyberpunk') {
-      return `<g transform="translate(-30, -30)" ${styleAttr}><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="${domainColor}" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="${domainColor}" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="${domainColor}" style="filter: drop-shadow(0 0 5px ${domainColor})">${isSecret ? '?' : rank}</text></g>`;
+      return `<g transform="translate(-30, -30)" ${filterAttr}><polygon points="10,20 50,20 60,30 60,60 30,75 0,60 0,30" fill="none" stroke="${domainColor}" stroke-width="2" class="glitch-line" /><path d="M15 25 L45 25 L45 55 L15 55 Z" fill="${domainColor}" opacity="0.2" /><text x="30" y="45" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="900" font-size="16" fill="${domainColor}" style="filter: drop-shadow(0 0 5px ${domainColor})">${isSecret ? '?' : rank}</text></g>`;
     }
     if (mode === 'traditional') {
-      return `<g transform="translate(-30, -30)" ${styleAttr}><circle cx="30" cy="30" r="25" fill="#e2b13c" stroke="#8b4513" stroke-width="2" /><path d="M15 15 Q30 5 45 15 L30 50 Z" fill="#d4af37" /><text x="30" y="38" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="24" fill="#5d2e0a">${isSecret ? '?' : rank}</text></g>`;
+      return `<g transform="translate(-30, -30)" ${filterAttr}><circle cx="30" cy="30" r="25" fill="#e2b13c" stroke="#8b4513" stroke-width="2" /><path d="M15 15 Q30 5 45 15 L30 50 Z" fill="#d4af37" /><text x="30" y="38" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="24" fill="#5d2e0a">${isSecret ? '?' : rank}</text></g>`;
     }
-
-    let filters = [];
-    if (isSecret) {
-      filters.push('url(#blurFilter)');
-    } else if (mode === 'unreal') {
-      filters.push(`url(#glow-${tier})`);
-    }
-
-    const filterAttr = filters.length > 0 ? `filter="${filters.join(' ')}"` : '';
 
     return `<g transform="translate(-30, -30) scale(0.85)" ${filterAttr}><path d="M10 50 Q 10 75 35 80 Q 60 75 60 50" fill="none" stroke="${domainColor}" stroke-width="2.5" opacity="0.4"/><path d="M22 68 L48 68 L45 62 L25 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M32 62 L32 55 L38 55 L38 62 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 25 Q 18 55 35 55 Q 52 55 52 25 Z" fill="${mode === 'unreal' ? `url(#grad-${tier}-${domain})` : domainColor}" /><path d="M18 30 Q 12 30 12 40 Q 12 48 18 45" fill="none" stroke="${domainColor}" stroke-width="3" /><path d="M52 30 Q 58 30 58 40 Q 58 48 52 45" fill="none" stroke="${domainColor}" stroke-width="3" /><text x="35" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="${isDark ? '#000' : '#fff'}">${isSecret ? '?' : rank}</text></g>`;
   };
