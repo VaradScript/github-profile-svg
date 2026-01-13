@@ -115,8 +115,10 @@ async function fetchDetailedStats(username, headers) {
 
         const processRepos = (repos) => {
             repos.forEach(repo => {
-                stars += (repo.stargazers_count || 0);
-                forks += (repo.forks_count || 0);
+                if (!repo.fork) {
+                    stars += (repo.stargazers_count || 0);
+                    forks += (repo.forks_count || 0);
+                }
                 if (repo.language) languages.add(repo.language);
             });
         };

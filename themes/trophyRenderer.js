@@ -184,7 +184,7 @@ function renderTrophySVG(data, options = {}) {
       </defs>
       <rect width="100%" height="100%" fill="none"/>
       ${content}
-      ${mode === 'nostalgic' ? `<pattern id="scanlines" width="100%" height="2" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="100%" y2="0" stroke="black" stroke-width="0.5" opacity="${isDark ? 0.2 : 0.05}" /></pattern><rect width="100%" height="100%" fill="url(#scanlines)" pointer-events="none" />` : ''}
+      ${(mode === 'nostalgic' || mode === 'cyberpunk') ? `<pattern id="scanlines" width="100%" height="2" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="100%" y2="0" stroke="black" stroke-width="0.5" opacity="${mode === 'cyberpunk' ? (isDark ? 0.3 : 0.1) : (isDark ? 0.2 : 0.05)}" /></pattern><rect width="100%" height="100%" fill="url(#scanlines)" pointer-events="none" />` : ''}
     </svg>
   `.trim();
 }
